@@ -1,2 +1,5 @@
 *.pyc
 *.db
+*.swp
+twcred.py
+/data/

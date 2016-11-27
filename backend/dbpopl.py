@@ -5,6 +5,7 @@ import sys
 import dbmngr
 import sqlite3
 import csplog
+import twdmpr
 
 def getBasicInfo(insert = True):
     try:
@@ -34,6 +35,8 @@ def getBasicInfo(insert = True):
     return None
 
 def updateLegisImg():
+    def nonexist():
+        return open("./data/noimg.jpeg","rb").read()
     def getImg(conn,iden):
         reqstr = "/data/photos/"+str(iden[0])+"-200px.jpeg"
         try:
@@ -42,13 +45,13 @@ def updateLegisImg():
             if res.status != 200:
                 if res.status == 404:
                     print reqstr
-                    return buffer("")
+                    return buffer(nonexist())
                 else:
                     raise Exception("HTTP error:"+str(res.status)+" at updateLegisImg",reqstr)
             return res.read()
         except Exception as e:
             print reqstr
-            return buffer("")
+            return buffer(nonexist())
     try:
         conn = httplib.HTTPSConnection("www.govtrack.us")
         dbc = dbmngr.connectDB("./data/","cspdb",False)
@@ -66,6 +69,19 @@ def updateLegisImg():
         csplog.logexc(sys.exc_info())
         return False
     return False
+
+def getCommInfo():
+    try:
+        conn = httplib.HTTPSConnection("https://www.govtrack.us")
+        endpoint = "/api/v2/committee?obsolete=false&limit=300"
+        conn.request("GET",endpoint)
+        res = conn.getresponse()
+        jd = json.loads(res.read())
+    except Exception:
+        csplog.logexc(sys.exc_info())
+        return False
+    return False
+        
 
 def main():
     updateLegisImg()
