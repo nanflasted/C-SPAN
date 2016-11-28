@@ -1,4 +1,3 @@
-
 #forked from:https://gist.github.com/yanofsky/5436496
 #author yanofsky
 
@@ -6,6 +5,15 @@ import tweepy #https://github.com/tweepy/tweepy
 import twcred
 import csplog
 import sys
+import re
+
+def removeLinks(text):
+    text = re.sub(r'((mailto:|(news|(ht|f)tp(s?))://){1}\S+)',"",text)
+    text = re.sub(r'&amp;',"and",text)
+    if text.split(" ")[-1].find("\xe2") != -1:
+        text = " ".join(text.split(" ")[:-1])
+    #text = re.sub(r'((\xe2){1}\S+)',"",text)
+    return text
 
 def getAllTweets(screen_name):
     try:
@@ -35,9 +43,10 @@ def getAllTweets(screen_name):
         	print "...%s tweets downloaded so far" % (len(alltweets))
         #transform the tweepy tweets into a 2D array that will populate the text
         outtweets = [tweet.text.encode("utf-8") for tweet in alltweets]
-        
+        outtweets = map(removeLinks,outtweets)
         with open('./data/input.txt','w+') as f:
-            map(f.write,outtweets)
+            for t in outtweets:
+                f.write(t+'\n')
         return True
     except Exception as e:
         csplog.logexc(sys.exc_info())

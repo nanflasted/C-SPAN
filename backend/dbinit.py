@@ -26,7 +26,7 @@ def main():
                 "id":       ["int","primary key","not null"],
                 "name":     ["text","not null"],
                 "desc":     ["text"],
-                "role":     ["text"]
+                "floor":     ["text"] #whether this is senate or house committee
             }
         dbmngr.createTable(conn,"committee",d)
 
@@ -35,9 +35,9 @@ def main():
                 "id":       ["int","primary key","not null"],
                 "name":     ["text"],
                 "time":     ["int","not null"],
-                "type":     ["int","not null"],
+                "type":     ["text","not null"],
                 "content":  ["text","not null"],
-                "image":    ["blob"],
+                "memebg":    ["text"],
                 "replyto":  ["int"],
                 "author":   ["int","not null"],
                 "committee":["int"]
@@ -52,9 +52,10 @@ def main():
         ##create relations
         #create participate
         d = {
-                "id":       ["int","primary key","not null"],
+                "id":       ["text","primary key","not null"],
                 "cid":      ["int","not null"],
-                "lid":      ["int","not null"]
+                "lid":      ["int","not null"],
+                "role":     ["text"]
             }
         f = {
                 "lid":      "legislator(id)",
