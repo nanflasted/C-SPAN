@@ -16,7 +16,7 @@ def main():
                 "role":     ["text","not null"],
                 "party":    ["text","not null"],
                 "state":    ["text"],
-                "network":  ["blob"],
+                "ideology": ["real"],
                 "image":    ["text"]
             }
         dbmngr.createTable(conn,"legislator",d)
@@ -26,19 +26,18 @@ def main():
                 "id":       ["int","primary key","not null"],
                 "name":     ["text","not null"],
                 "desc":     ["text"],
-                "floor":     ["text"] #whether this is senate or house committee
+                "floor":    ["text"] #whether this is senate or house committee
             }
         dbmngr.createTable(conn,"committee",d)
 
         #create content table
         d = {
-                "id":       ["int","primary key","not null"],
-                "name":     ["text"],
-                "time":     ["int","not null"],
+                "id":       ["text","primary key","not null"],
+                "time":     ["text","not null"],
                 "type":     ["text","not null"],
                 "content":  ["text","not null"],
-                "memebg":    ["text"],
-                "replyto":  ["int"],
+                "memebg":   ["text"],
+                "replyto":  ["text"],
                 "author":   ["int","not null"],
                 "committee":["int"]
             }
