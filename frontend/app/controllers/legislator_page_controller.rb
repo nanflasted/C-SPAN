@@ -1,5 +1,5 @@
 class LegislatorPageController < ApplicationController
   def view
-    @message = "Test!" + params[:id]
+    @message = "Test! #{Legislator.first.name}"
   end
 end
