@@ -1,0 +1,2 @@
+module LegislatorPageHelper
+end
