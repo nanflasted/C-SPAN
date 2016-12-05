@@ -19,34 +19,34 @@ def main():
                 "ideology": ["real"],
                 "image":    ["text"]
             }
-        dbmngr.createTable(conn,"legislator",d)
+        dbmngr.createTable(conn,"legislators",d)
 
-        #create committee table
+        #create committees table
         d = {
                 "id":       ["int","primary key","not null"],
                 "name":     ["text","not null"],
                 "desc":     ["text"],
-                "floor":    ["text"] #whether this is senate or house committee
+                "floor":    ["text"] #whether this is senate or house committees
             }
-        dbmngr.createTable(conn,"committee",d)
+        dbmngr.createTable(conn,"committees",d)
 
         #create content table
         d = {
                 "id":       ["text","primary key","not null"],
                 "time":     ["text","not null"],
                 "type":     ["text","not null"],
-                "content":  ["text","not null"],
+                "contents":  ["text","not null"],
                 "memebg":   ["text"],
                 "replyto":  ["text"],
                 "author":   ["int","not null"],
-                "committee":["int"]
+                "committees":["int"]
             }
         f = {
-                "replyto":  "content(id)",
-                "author":   "legislator(id)",
-                "committee":"committee(id)"
+                "replyto":  "contents(id)",
+                "author":   "legislators(id)",
+                "committees":"committees(id)"
             }
-        dbmngr.createTable(conn,"content",d,f)
+        dbmngr.createTable(conn,"contents",d,f)
 
         ##create relations
         #create participate
@@ -57,34 +57,35 @@ def main():
                 "role":     ["text"]
             }
         f = {
-                "lid":      "legislator(id)",
-                "cid":      "committee(id)"
+                "lid":      "legislators(id)",
+                "cid":      "committees(id)"
             }
-        dbmngr.createTable(conn,"participate",d,f)
+        dbmngr.createTable(conn,"participates",d,f)
 
         #create like
         d = {
-                "id":       ["int","primary key","not null"],
+                "id":       ["text","primary key","not null"],
                 "lid":      ["int","not null"],
-                "cid":      ["int","not null"]
+                "cid":      ["text","not null"]
             }
         f = {
-                "lid":      "legislator(id)",
-                "cid":      "content(id)",
+                "lid":      "legislators(id)",
+                "cid":      "contents(id)",
             }
-        dbmngr.createTable(conn,"like",d,f)
+        dbmngr.createTable(conn,"likes",d,f)
 
         #create vote
         d = {
-                "id":       ["int","primary key","not null"],
+                "id":       ["text","primary key","not null"],
                 "lid":      ["int","not null"],
-                "cid":      ["int","not null"]
+                "cid":      ["text","not null"]
             }
         f = {
-                "lid":      "legislator(id)",
-                "cid":      "content(id)",
+                "lid":      "legislators(id)",
+                "cid":      "contents(id)",
             }
-        dbmngr.createTable(conn,"vote",d,f)
+        dbmngr.createTable(conn,"votes",d,f)
+        conn.close()
     return
 
 if __name__ == "__main__":  main()

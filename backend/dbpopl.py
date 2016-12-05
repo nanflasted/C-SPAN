@@ -6,13 +6,14 @@ import os
 import sys
 import datetime
 import subprocess
+import random
 
 import dbmngr
 import csplog
-import twdmpr
+import nwmngr
 
 govhost = "www.govtrack.us"
-nTweets,nMemes,nBills,nReplies = 0,0,0,0
+nT,nB,nM,nR = 0,0,0,0
 caucusnum = '114'
 
 def checkResponse(res,endpoint):
@@ -37,19 +38,23 @@ def getBasicInfo(insert = True):
         res = conn.getresponse()
         checkResponse(res,endpoint)
         data = json.loads(res.read())
-        
+        print "scraped basic info from govtrack"
+
         endpoint = "/data/us/"+caucusnum+"/stats/sponsorshipanalysis_h.txt"
         conn.request("GET",endpoint)
         res = conn.getresponse()
         checkResponse(res,endpoint)
         ideo = res.read().split("\n")
         ideo = ideo[1:-1]
+        print "scraped house ideology"
 
         endpoint = "/data/us/"+caucusnum+"/stats/sponsorshipanalysis_s.txt"
         conn.request("GET",endpoint)
         res = conn.getresponse()
         checkResponse(res,endpoint)
         ideo.extend(res.read().split("\n")[1:-1])
+        print "scraped senate ideology"
+
         ideo = [k.split(",") for k in ideo]
         ideo = sorted(ideo,key = lambda l:l[1])
         binsize = len(ideo)//5
@@ -59,14 +64,16 @@ def getBasicInfo(insert = True):
         for j in range(binsize*4,len(ideo)):
             ideo[j][1] = 4
 
+        print "ideology formatted"
         conn.close()
+        
 
         ideo = {int(p[0]):p[1] for p in ideo}
 
         formatted = [(p[u'person'][u'id'],(p[u'person'][u'firstname']+" "+p[u'person'][u'lastname']),p[u'person'][u'name'],p[u'role_type'],p[u'party'],p[u'state'],ideo[p[u'person'][u'id']],None) for p in data[u'objects']]
         if insert:
             dbc = dbmngr.connectDB("./data/","cspdb",False)
-            if not dbmngr.insertMany(dbc,"legislator",\
+            if not dbmngr.insertMany(dbc,"legislators",\
                     ["id","name","desc","role","party","state","ideology","image"],formatted):
                 raise Exception("Database Insertion Error")
             dbc.close()
@@ -111,12 +118,12 @@ def updateLegisImg():
     try:
         conn = httplib.HTTPSConnection(govhost)
         dbc = dbmngr.connectDB("./data/","cspdb",False)
-        idcur = dbmngr.queryEntry(dbc,["id"],["legislator"])
+        idcur = dbmngr.queryEntry(dbc,["id"],["legislators"])
         if idcur is None:
             raise Exception("Query Error at updateLegisImg")
         idlist = idcur.fetchall()
         updlist = [(sqlite3.Binary(getImg(conn,p)),p[0]) for p in idlist]
-        if not dbmngr.updateMany(dbc,"legislator",["image"],updlist):
+        if not dbmngr.updateMany(dbc,"legislators",["image"],updlist):
             raise Exception("Update Error at updateLegisImg")
         conn.close()
         dbc.close()
@@ -139,7 +146,7 @@ def getCommInfo(insert = True):
                 ]
         if insert:
             dbc = dbmngr.connectDB("./data/","cspdb",False)
-            if not dbmngr.insertMany(dbc,"committee",["id","name","desc","floor"],formatted):
+            if not dbmngr.insertMany(dbc,"committees",["id","name","desc","floor"],formatted):
                 raise Exception("Database Insertion Error")
         else:
             pass
@@ -170,7 +177,7 @@ def getParticipation(commInfo,insert = True):
                 p[u'person'][u'id'],p[u'committee'][u'id'],p[u'role']) for p in jd[u'objects']
             ]
             if insert:
-                if not dbmngr.insertMany(dbc,"participate",["id","lid","cid","role"],formatted):
+                if not dbmngr.insertMany(dbc,"participates",["id","lid","cid","role"],formatted):
                     raise Exception("Database Insertion Error")
             else:
                 pass
@@ -181,150 +188,254 @@ def getParticipation(commInfo,insert = True):
         csplog.logexc(sys.exc_info())
         return False
     return False
-
-def genTweetBlobs(twaccnts):
-    try:
-        dbc = dbmngr.connectDB("./data/","cspdb",False)
-        idcur = dbmngr.queryEntry(dbc,["id","ideology"],["legislator"])
-        if idcur is None:
-            raise Exception("Query Error at updateLegisImg")
-        idlist = idcur.fetchall()
-        for i in range(5):
-            acclist = [twaccnts[k[0]] for k in idlist if k[1] == i]
-            datadir = './data/twblobs/'+str(i) + '/'
-            twdmpr.getAllTweets(acclist,datadir+'input.txt')
-            print "input file generation for ideology "+str(i)+" success"
-            res = subprocess.call(["python",
-                "./rnn/train.py",
-                "--data_dir="+datadir,
-                "--save_dir="+datadir+'model/',
-                "--rnn_size=" + str(128),
-                "--num_epochs=" + str(50),
-                "--learning_rate="+str(0.03),
-                ])
-            if res != 0: raise Exception("Training subprocess call Error at genTweetBlobs")
-            print "model trained for ideology "+str(i)
-        return True
-    except Exception:
-        csplog.logexc(sys.exc_info())
-        return False
-    return False
         
 def genTweets(num,iden,insert = True):
     '''generate and insert tweets under iden's name, according to iden's ideology'''
     def dict_factory(cursor, row):
         d = {}
-        for idx, col in enumerate(cursor.description):
-            d[col[0]] = row[idx]
+        d[row[0]] = row[1]
         return d
     try:
         #acquire ideology blob
         dbc = dbmngr.connectDB("./data/","cspdb",False)
-        dbc.row_factory = dict_factory
-        idcur = dbmngr.queryEntry(dbc,["id","ideology"],["legislator"])
+        #dbc.row_factory = dict_factory
+        idcur = dbmngr.queryEntry(dbc,["id","ideology"],["legislators"])
         if idcur is None:
             raise Exception("Query Error at genTweets")
         idict = idcur.fetchall()
-        modeldir = './data/twblobs/'+str(idict[iden])+'/model/'
-
+        idict = {t[0]:t[1] for t in idict}
+        modeldir = './data/twblobs/'+str(int(idict[iden[0]]))+'/model/'
+        dbc.close()
         #generate tweets
         gentweets = []
         for i in range(num):
             numwords = random.choice(range(15,30))
             gentweets += [subprocess.check_output([
-                "./rnn/sample.py",
-                "--save_dir="+modeldir,
-                "-n="+str(numwords),
-                "--sample=" + str(1)
+                "python","./rnn/sample.py",
+                "--save_dir",modeldir,
+                "-n",str(numwords),
+                "--sample",str(1)
                 ]).split("\n")[1]]
-        print "tweets generation from model complete"
+        print "tweets" if insert else "reply" + " generation from model complete"
 
+        collist = [
+            "id",
+            "time",
+            "type",
+            "contents",
+            "author"
+            ]
+        contentlist = [[
+            unicode(uuid.uuid3(uuid.NAMESPACE_DNS,t)),
+            unicode(datetime.datetime.now()),
+            u'post',
+            t,
+            iden[0]] for t in gentweets]
         if insert: 
-            #insert into database
-            collist = [
-                "id",
-                "time",
-                "type",
-                "content",
-                "author"
-                ]
-            contentlist = [(
-                uuid.uuid3(uuid.NAMESPACE_DNS,t),
-                str(datetime.datetime.now()),
-                "post",
-                t,
-                iden) for t in gentweets]
-
-            if not dbmngr.insertMany(dbc,"content",collist,contentlist):
+        #insert into database
+            dbc = dbmngr.connectDB("./data/","cspdb",False)
+            dbc.text_factory = str
+            if not dbmngr.insertMany(dbc,"contents",collist,contentlist):
                 raise Exception("Database Insertion Error at genTweets")
+            dbc.close()
 
-        dbc.close()
-        return gentweets
+        return contentlist
     except Exception:
         csplog.logexc(sys.exc_info())
         return None
     return None
         
 
-def genBills(num):
-    '''generate a random bill title, and insert into database'''
-    #generate a random number k, k in [1,5]
-    #generate k bill title literals from bill blob
-    #concatenate literals
-    #insert into database
-    pass
+def genBills(num,committee,iden):
+    try:
+        res = []
+        for i in range(num):
+            #generate a random number k, k in [1,5]
+            k = random.choice(range(1,6))
+            #generate k bill title literals from bill blob
+            literals = []
+            modeldir = "./data/bills/model/"
+            genlits = []
+            for _ in range(k):
+                numwords = random.choice(range(1,4))
+                genlits += [subprocess.check_output([
+                        "python","./rnn/sample.py",
+                        "--save_dir",modeldir,
+                        "-n",str(numwords),
+                        "--sample",str(1)
+                        ]).split("\n")[1].capitalize()]
 
-def genMemes(num,iden):
-    #generate tweets with genTweets(num,iden)
-    #break up tweets into 2 parts randomly
-    #generate a number for meme background
-    #insert into database
-    pass
+            #concatenate literals
+            res += [", ".join(genlits[:-1]) + " and " + genlits[-1] + " Act of 2017"]
+            print res
+            print "{0}/{1} bills generated".format(i+1,num)
+        #insert into database
+        collist = [
+                "id",
+                "time",
+                "type",
+                "contents",
+                "author",
+                "committees"
+                ]
+        contentlist = [[
+                unicode(uuid.uuid3(uuid.NAMESPACE_DNS,r)),
+                unicode(datetime.datetime.now()),
+                u'bill',
+                r,
+                iden[0],
+                committee] for r in res]
+        dbc = dbmngr.connectDB("./data/","cspdb",False)
+        dbc.text_factory = str
+        if not dbmngr.insertMany(dbc,"contents",collist,contentlist):
+            raise Exception("Database Insertion Error at genBills")
+        dbc.close()
+        print "Bills insertion complete"
+        return contentlist
+    except Exception:
+        csplog.logexc(sys.exc_info())
+        return None
+    return None
 
+def genMemes(num,iden,background,insert = True):
+    try:
+        #generate tweets with genTweets(num,iden)
+        tw = genTweets(num,iden,False)
+        #break up tweets into 2 parts randomly
+        for t in tw:
+            k = random.choice(range(1,len(t[-2].split(" "))-2))
+            t[-2] = "<MEME>".join(t[-2].split(t[-2].split(" ")[k]))
+        print "top/bottom text generated, separated by string <MEME>"
+        collist = [
+            "id",
+            "time",
+            "type",
+            "contents",
+            "author",
+            "memebg"
+            ]
+        contentlist = [[
+            unicode(uuid.uuid3(uuid.NAMESPACE_DNS,t[-2])),
+            unicode(datetime.datetime.now()),
+            u'meme',
+            t[-2],
+            iden[0],
+            background] for t in tw]
+        #insert into database
+        if insert:
+            dbc = dbmngr.connectDB("./data/","cspdb",False)
+            dbc.text_factory = str
+            if not dbmngr.insertMany(dbc,"contents",collist,contentlist):
+                raise Exception("Database Insertion Error at genMemes")
+            dbc.close()
+        print "Meme generation completed"
+        return contentlist
+    except Exception:
+        csplog.logexc(sys.exc_info())
+        return None
+    return None
 
 def genReplies(num,iden,replyto):
     try:
         #generate with genTweets
         dbc = dbmngr.connectDB("./data/","cspdb",False)
+        dbc.text_factory = str
         replies = genTweets(num,iden,False)
         #insert into database
         collist = [
                     "id",
                     "time",
                     "type",
-                    "content",
+                    "contents",
                     "author",
                     "replyto",
                     ]
-        contentlist = [(
-            uuid.uuid3(uuid.NAMESPACE_DNS,t),
-            str(datetime.datetime.now()),
-            "reply",
-            t,
-            iden,
-            replyto) for t in replies]
+        contentlist = [[
+            unicode(uuid.uuid3(uuid.NAMESPACE_DNS,t[-2])),
+            unicode(datetime.datetime.now()),
+            u"reply",
+            t[-2],
+            iden[0],
+            replyto] for t in replies]
 
-        if not dbmngr.insertMany(dbc,"content",collist,contentlist):
-            raise Exception("Database Insertion Error at genTweets")
+        if not dbmngr.insertMany(dbc,"contents",collist,contentlist):
+            raise Exception("Database Insertion Error at genReplies")
 
         dbc.close()
-        return True
+        return contentlist
     except Exception:
         csplog.logexc(sys.exc_info())
-        return False
-    return False
-        
+        return None
+    return None
 
-def populate(t,m,b,r,insert = True):
+def genVotes(billid,voters):
     try:
         dbc = dbmngr.connectDB("./data/","cspdb",False)
-        idlist = dbmngr.queryEntry(dbc,["id"],["legislator"])
+        dbc.text_factory = str
+        collist = [
+                "id",
+                "lid",
+                "cid",
+                "vote"
+                ]
+        voteres = [[
+            unicode(uuid.uuid3(uuid.NAMESPACE_DNS,str(i)+billid)),
+            i,
+            billid,
+            "yea" if random.choice(range(2))>0 else "nay"
+            ] for i in voters]
+        if not dbmngr.insertMany(dbc,"votes",collist,voteres):
+            raise Exception("Database Insertion Error at genVotes")
+        dbc.close()
+        return voteres
+    except Exception:
+        csplog.logexc(sys.exc_info())
+        return None
+    return None
+        
+def genLikes(contentid, idlist, authorideo=None, ideolist=None):
+    try:
+        dbc = dbmngr.connectDB("./data/","cspdb",False)
+        dbc.text_factory = str
+        collist = [
+                "id",
+                "lid",
+                "cid"
+                ]
+        problist = []
+        if authorideo is not None and ideolist is not None:
+            problist = [0.01*(4-abs(i-authorideo)) for i in ideolist]
+        else:
+            problist = [0.05 for _ in idlist]
+        
+        likes = [idlist[i] for i in len(idlist) if random.random() > problist[i]]
+        likelist = [[
+            unicode(uuid.uuid3(uuid.NAMESPACE_DNS,str(i)+contentid)+'l'),
+            i,
+            contentid
+            ] for i in likes]
+        if not dbmngr.insertMany(dbc,"votes",collist,voteres):
+            raise Exception("Database Insertion Error at genVotes")
+        dbc.close()
+        return likes
+    except Exception:
+        csplog.logexc(sys.exc_info())
+        return None
+    return None
+                   
+
+
+def populate(t,r,insert = True):
+    try:
+        dbc = dbmngr.connectDB("./data/","cspdb",False)
+        idlist = dbmngr.queryEntry(dbc,["id"],["legislators"]).fetchall()
         dbc.close()
         for l in idlist:
             tweets = genTweets(t,l,True)
             for tw in tweets:
                 reper = random.choice(idlist)
                 genReplies(r,reper,tw[0])
+        return True
     except Exception:
         csplog.logexc(sys.exc_info())
         return False
@@ -339,18 +450,19 @@ def parseargs():
     return nT, nM, nB, nR
 
 def main():
-    parseargs()
+    global nT,nM,nB,nR
+    nT,nM,nB,nR=parseargs()
     twac = getBasicInfo()
     print "Legislator information scraped"
-    genTweetBlobs(twac)
+    nwmngr.genTweetBlobs(twac)
     print "Ideology based tweet generator blob made"
     updateLegisImg()
-    print "Legislator images generated"
+    print "Legislator images updated"
     committee = getCommInfo()
     print "Committee information scraped"
     getParticipation(committee)
     print "Committee participation information inserted"
-    populate(nT,nM,nB,nR)
+    populate(nT,nR)
     print "Done"
     return 
         
