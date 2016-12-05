@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  desc: MyText
+  role: MyText
+  party: MyText
+  state: MyText
+  ideology: 1.5
+  image: MyText
+
+two:
+  name: MyText
+  desc: MyText
+  role: MyText
+  party: MyText
+  state: MyText
+  ideology: 1.5
+  image: MyText

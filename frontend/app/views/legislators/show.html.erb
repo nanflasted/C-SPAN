@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @legislator.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @legislator.desc %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @legislator.role %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @legislator.party %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @legislator.state %>
+</p>
+
+<p>
+  <strong>Ideology:</strong>
+  <%= @legislator.ideology %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @legislator.image %>
+</p>
+
+<%= link_to 'Edit', edit_legislator_path(@legislator) %> |
+<%= link_to 'Back', legislators_path %>

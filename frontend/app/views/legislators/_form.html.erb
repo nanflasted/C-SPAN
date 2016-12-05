@@ -1,0 +1,45 @@
+<%= form_for(@legislator) do |f| %>
+  <% if @legislator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@legislator.errors.count, "error") %> prohibited this legislator from being saved:</h2>
+
+      <ul>
+      <% @legislator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_area :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :role %><br>
+    <%= f.text_area :role %>
+  </div>
+  <div class="field">
+    <%= f.label :party %><br>
+    <%= f.text_area :party %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_area :state %>
+  </div>
+  <div class="field">
+    <%= f.label :ideology %><br>
+    <%= f.text_field :ideology %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_area :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
