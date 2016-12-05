@@ -1,0 +1,102 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module dbmngr</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>dbmngr</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/media/nanflasted/New Volume/Programming/Linux/github/C-SPAN/backend/dbmngr.py">/media/nanflasted/New Volume/Programming/Linux/github/C-SPAN/backend/dbmngr.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="csplog.html">csplog</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+<a href="sqlite3.html">sqlite3</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-connectDB"><strong>connectDB</strong></a>(directory, name, new<font color="#909090">=False</font>)</dt><dd><tt>Connect&nbsp;to&nbsp;a&nbsp;given&nbsp;database,&nbsp;creates&nbsp;one&nbsp;if&nbsp;it&nbsp;doesn't&nbsp;exist<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;directory:&nbsp;&nbsp;The&nbsp;directory&nbsp;of&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;&nbsp;&nbsp;The&nbsp;name&nbsp;(or&nbsp;intended&nbsp;name)&nbsp;of&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new:&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;the&nbsp;method&nbsp;should&nbsp;create&nbsp;a&nbsp;new&nbsp;database<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;conn:&nbsp;&nbsp;&nbsp;The&nbsp;connection&nbsp;to&nbsp;the&nbsp;Database,&nbsp;None&nbsp;if&nbsp;database&nbsp;doesn't&nbsp;exist&nbsp;and&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instruction&nbsp;is&nbsp;to&nbsp;not&nbsp;create&nbsp;one;&nbsp;or&nbsp;if&nbsp;there&nbsp;was&nbsp;an&nbsp;exception</tt></dd></dl>
+ <dl><dt><a name="-createTable"><strong>createTable</strong></a>(conn, name, col, foreign<font color="#909090">=None</font>)</dt><dd><tt>Create&nbsp;a&nbsp;table&nbsp;with&nbsp;the&nbsp;given&nbsp;connection<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-createTable">createTable</a>(conn,&nbsp;"example",&nbsp;{"col1":["INT"],&nbsp;"col2":&nbsp;["int","primary","not&nbsp;null"]})<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;conn:&nbsp;&nbsp;&nbsp;The&nbsp;Connection&nbsp;to&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;&nbsp;&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;table<br>
+&nbsp;&nbsp;&nbsp;&nbsp;col:&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;to&nbsp;the&nbsp;columns,&nbsp;with&nbsp;the&nbsp;keys&nbsp;as&nbsp;names,&nbsp;and&nbsp;values&nbsp;as&nbsp;type&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keywords&nbsp;such&nbsp;as&nbsp;"PRIMARY,"&nbsp;"NOT&nbsp;NULL"&nbsp;etc.&nbsp;Values&nbsp;must&nbsp;be&nbsp;iterable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;foreign:A&nbsp;dictionary&nbsp;to&nbsp;indicate&nbsp;which&nbsp;columns&nbsp;are&nbsp;foreign.&nbsp;Keys&nbsp;are&nbsp;the&nbsp;local&nbsp;columns,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;Values&nbsp;are&nbsp;foreign&nbsp;columns<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;Whether&nbsp;the&nbsp;operation&nbsp;was&nbsp;successful</tt></dd></dl>
+ <dl><dt><a name="-insertEntry"><strong>insertEntry</strong></a>(conn, table, entry)</dt><dd><tt>Insert&nbsp;an&nbsp;entry&nbsp;into&nbsp;the&nbsp;database&nbsp;referred&nbsp;to&nbsp;by&nbsp;the&nbsp;connection<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-insertEntry">insertEntry</a>(conn,"sampleTable",{"col1":2,"col2":0})<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;conn:&nbsp;&nbsp;&nbsp;The&nbsp;connection&nbsp;to&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table:&nbsp;&nbsp;&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;table<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entry:&nbsp;&nbsp;A&nbsp;dictionary&nbsp;of&nbsp;the&nbsp;columns&nbsp;that&nbsp;the&nbsp;entry&nbsp;has,&nbsp;and&nbsp;the&nbsp;respective&nbsp;values<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;whether&nbsp;the&nbsp;operation&nbsp;was&nbsp;successful</tt></dd></dl>
+ <dl><dt><a name="-insertMany"><strong>insertMany</strong></a>(conn, table, cols, entrylist)</dt><dd><tt>For&nbsp;inserting&nbsp;many&nbsp;rows&nbsp;at&nbsp;the&nbsp;same&nbsp;time<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;conn:&nbsp;&nbsp;&nbsp;The&nbsp;connection&nbsp;to&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table:&nbsp;&nbsp;The&nbsp;table&nbsp;to&nbsp;be&nbsp;inserted&nbsp;into<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cols:&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;columns&nbsp;related&nbsp;to&nbsp;the&nbsp;entry<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entrylist:&nbsp;&nbsp;List&nbsp;of&nbsp;tuples&nbsp;of&nbsp;entry&nbsp;values&nbsp;to&nbsp;be&nbsp;inserted.<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;&nbsp;&nbsp;Whether&nbsp;the&nbsp;operation&nbsp;was&nbsp;successful</tt></dd></dl>
+ <dl><dt><a name="-queryEntry"><strong>queryEntry</strong></a>(conn, tar, tab, cond<font color="#909090">=None</font>, agg<font color="#909090">=None</font>, aggcond<font color="#909090">=None</font>)</dt><dd><tt>Query&nbsp;the&nbsp;database&nbsp;for&nbsp;the&nbsp;entries&nbsp;with&nbsp;the&nbsp;given&nbsp;conditions,<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;conn:&nbsp;&nbsp;&nbsp;The&nbsp;connection&nbsp;to&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tar:&nbsp;&nbsp;&nbsp;&nbsp;Target&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tab:&nbsp;&nbsp;&nbsp;&nbsp;"From"&nbsp;conditions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cond:&nbsp;&nbsp;&nbsp;"Where"&nbsp;conditions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;agg:&nbsp;&nbsp;&nbsp;&nbsp;aggregation&nbsp;conditions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;aggcond:"having"&nbsp;conditions<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;result:&nbsp;Cursor&nbsp;pointing&nbsp;to&nbsp;the&nbsp;query&nbsp;results</tt></dd></dl>
+ <dl><dt><a name="-removeEntry"><strong>removeEntry</strong></a>(conn, table, cond)</dt><dd><tt>Remove&nbsp;all&nbsp;entries&nbsp;within&nbsp;the&nbsp;given&nbsp;table&nbsp;with&nbsp;the&nbsp;given&nbsp;conditions<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;conn:&nbsp;&nbsp;&nbsp;The&nbsp;connection&nbsp;to&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table:&nbsp;&nbsp;"From"&nbsp;clause&nbsp;conditions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cond:&nbsp;&nbsp;&nbsp;"Where"clause&nbsp;conditions<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;&nbsp;&nbsp;Whether&nbsp;the&nbsp;operation&nbsp;was&nbsp;successfu;</tt></dd></dl>
+ <dl><dt><a name="-sanitize"><strong>sanitize</strong></a>(name)</dt><dd><tt>Sanitizes&nbsp;input&nbsp;for&nbsp;safer&nbsp;sql<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name:&nbsp;&nbsp;&nbsp;the&nbsp;string&nbsp;to&nbsp;be&nbsp;sanitized<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;safename:&nbsp;&nbsp;&nbsp;sanitized,&nbsp;sql-safe&nbsp;name</tt></dd></dl>
+ <dl><dt><a name="-updateMany"><strong>updateMany</strong></a>(conn, table, cols, vals)</dt><dd><tt>Update&nbsp;certain&nbsp;columns&nbsp;on&nbsp;certain&nbsp;entries&nbsp;in&nbsp;the&nbsp;given&nbsp;table,&nbsp;with&nbsp;the&nbsp;given&nbsp;values.<br>
+Example:<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;conn:&nbsp;&nbsp;&nbsp;connection&nbsp;to&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;table:&nbsp;&nbsp;the&nbsp;table&nbsp;to&nbsp;be&nbsp;targeted&nbsp;for&nbsp;updates<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cols:&nbsp;&nbsp;&nbsp;the&nbsp;columns&nbsp;to&nbsp;be&nbsp;updated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;vals:&nbsp;&nbsp;&nbsp;the&nbsp;values&nbsp;to&nbsp;be&nbsp;inserted&nbsp;as&nbsp;the&nbsp;update,&nbsp;format:&nbsp;(value1,value2,...,valuen,id)<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;&nbsp;&nbsp;whether&nbsp;the&nbsp;operation&nbsp;was&nbsp;successful</tt></dd></dl>
+</td></tr></table>
+</body></html>

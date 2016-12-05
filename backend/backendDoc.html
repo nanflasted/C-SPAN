@@ -1,0 +1,110 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module backend</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>backend</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/media/nanflasted/New Volume/Programming/Linux/github/C-SPAN/backend/backend.py">/media/nanflasted/New Volume/Programming/Linux/github/C-SPAN/backend/backend.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="csplog.html">csplog</a><br>
+<a href="dbinit.html">dbinit</a><br>
+<a href="dbmngr.html">dbmngr</a><br>
+</td><td width="25%" valign=top><a href="dbpopl.html">dbpopl</a><br>
+<a href="loginit.html">loginit</a><br>
+<a href="nwmngr.html">nwmngr</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="subprocess.html">subprocess</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-generateNN"><strong>generateNN</strong></a>()</dt><dd><tt>Generate&nbsp;Neural&nbsp;Network&nbsp;Blobs&nbsp;for&nbsp;Tweets&nbsp;and&nbsp;Bills<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;whether&nbsp;the&nbsp;operation&nbsp;was&nbsp;successful</tt></dd></dl>
+ <dl><dt><a name="-getIdeology"><strong>getIdeology</strong></a>()</dt><dd><tt>Get&nbsp;all&nbsp;of&nbsp;the&nbsp;legislators'&nbsp;ideology&nbsp;score<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;{id-&gt;ideology},&nbsp;None&nbsp;if&nbsp;operation&nbsp;failed</tt></dd></dl>
+ <dl><dt><a name="-hardreset"><strong>hardreset</strong></a>()</dt><dd><tt>Nuke&nbsp;everything,&nbsp;basically<br>
+"Our&nbsp;words&nbsp;are&nbsp;backed&nbsp;with&nbsp;NUCLEAR&nbsp;WEAPONS"&nbsp;--Mahatma&nbsp;Gandhi<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;whether&nbsp;the&nbsp;operation&nbsp;was&nbsp;successful</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt></dl>
+ <dl><dt><a name="-newBill"><strong>newBill</strong></a>(num, legis_id, com_id, likes<font color="#909090">=True</font>)</dt><dd><tt>Generate&nbsp;new&nbsp;bills,&nbsp;and&nbsp;have&nbsp;all&nbsp;the&nbsp;members&nbsp;vote&nbsp;on&nbsp;it<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Note&nbsp;the&nbsp;lack&nbsp;of&nbsp;'insert'&nbsp;parameter&nbsp;here,&nbsp;any&nbsp;bill&nbsp;generated&nbsp;will&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;automatically&nbsp;inserted.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;memes&nbsp;to&nbsp;be&nbsp;generated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;legis_id:&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;legislator,&nbsp;should&nbsp;be&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;com_id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;committee,&nbsp;should&nbsp;be&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;likes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;also&nbsp;generate&nbsp;the&nbsp;'like'&nbsp;relations<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;&nbsp;&nbsp;&nbsp;ids&nbsp;of&nbsp;the&nbsp;generated&nbsp;contents&nbsp;if&nbsp;successful,&nbsp;None&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-newMeme"><strong>newMeme</strong></a>(num, legis_id, bg, insert<font color="#909090">=True</font>, likes<font color="#909090">=True</font>)</dt><dd><tt>Similar&nbsp;to&nbsp;newTweet,&nbsp;but&nbsp;in&nbsp;the&nbsp;meme&nbsp;form<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;memes&nbsp;to&nbsp;be&nbsp;generated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;legis_id:&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;legislator,&nbsp;should&nbsp;be&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bg:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;encoded&nbsp;string&nbsp;for&nbsp;the&nbsp;background&nbsp;of&nbsp;the&nbsp;meme<br>
+&nbsp;&nbsp;&nbsp;&nbsp;insert:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;insert&nbsp;the&nbsp;generated&nbsp;memes&nbsp;into&nbsp;the&nbsp;db<br>
+&nbsp;&nbsp;&nbsp;&nbsp;likes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;also&nbsp;generate&nbsp;the&nbsp;'like'&nbsp;relations<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;&nbsp;&nbsp;&nbsp;ids&nbsp;of&nbsp;the&nbsp;generated&nbsp;contents&nbsp;if&nbsp;successful,&nbsp;None&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-newReply"><strong>newReply</strong></a>(num, legis_id, oc_id, likes<font color="#909090">=True</font>)</dt><dd><tt>Generate&nbsp;replies&nbsp;to&nbsp;a&nbsp;content<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;memes&nbsp;to&nbsp;be&nbsp;generated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;legis_id:&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;legislator,&nbsp;should&nbsp;be&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;oc_id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;content&nbsp;being&nbsp;replied&nbsp;to,&nbsp;should&nbsp;be&nbsp;string&nbsp;of&nbsp;some&nbsp;uuid<br>
+&nbsp;&nbsp;&nbsp;&nbsp;likes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;also&nbsp;generate&nbsp;the&nbsp;'like'&nbsp;relations<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;&nbsp;&nbsp;&nbsp;ids&nbsp;of&nbsp;the&nbsp;generated&nbsp;contents&nbsp;if&nbsp;successful,&nbsp;None&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-newTweet"><strong>newTweet</strong></a>(num, legis_id, insert<font color="#909090">=True</font>, likes<font color="#909090">=True</font>)</dt><dd><tt>Generate&nbsp;and&nbsp;maybe&nbsp;insert&nbsp;new&nbsp;tweets&nbsp;for&nbsp;given&nbsp;legislator<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;tweets&nbsp;to&nbsp;be&nbsp;generated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;legis_id:&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;legislator,&nbsp;should&nbsp;be&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;insert:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;insert&nbsp;the&nbsp;generated&nbsp;tweets&nbsp;into&nbsp;the&nbsp;db<br>
+&nbsp;&nbsp;&nbsp;&nbsp;likes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;also&nbsp;generate&nbsp;the&nbsp;'like'&nbsp;relations<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;&nbsp;&nbsp;&nbsp;ids&nbsp;of&nbsp;the&nbsp;generated&nbsp;contents&nbsp;if&nbsp;successful,&nbsp;None&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-populate"><strong>populate</strong></a>(t<font color="#909090">=5</font>, m<font color="#909090">=0</font>, b<font color="#909090">=10</font>, r<font color="#909090">=1</font>)</dt><dd><tt>Populate&nbsp;the&nbsp;database<br>
+Currently&nbsp;unsupported:&nbsp;populate&nbsp;memes&nbsp;initially<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;t:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;tweets<br>
+&nbsp;&nbsp;&nbsp;&nbsp;m:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;memes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;bills<br>
+&nbsp;&nbsp;&nbsp;&nbsp;r:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;replies<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;&nbsp;&nbsp;whether&nbsp;the&nbsp;operation&nbsp;was&nbsp;successful</tt></dd></dl>
+ <dl><dt><a name="-server"><strong>server</strong></a>()</dt><dd><tt>Use&nbsp;this&nbsp;script&nbsp;as&nbsp;a&nbsp;server<br>
+Currently&nbsp;unfinished<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-softreset"><strong>softreset</strong></a>()</dt><dd><tt>Remove&nbsp;everything&nbsp;except&nbsp;for&nbsp;hard&nbsp;trained&nbsp;neural&nbsp;nets<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;None<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;whether&nbsp;the&nbsp;operation&nbsp;was&nbsp;successful</tt></dd></dl>
+</td></tr></table>
+</body></html>

@@ -213,6 +213,7 @@ def newReply(num,legis_id,oc_id,likes=True):
 
 def server():
     '''Use this script as a server
+    Currently unfinished
     Args:
         None
     Returns:
@@ -221,9 +222,8 @@ def server():
     pass
 
 def main():
-    global ideo
-    ideo = getIdeology()
-    server()
+    hardreset()
+    populate()
     return
 
 if __name__ == "main":  main()
