@@ -19,6 +19,11 @@
 * twcred.py
  * twitter API oauth credentials
 
+##Dependencies:
+[Tensorflow](https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html#download-and-setup)
+[Tweepy](http://www.tweepy.org/) `pip install Tweepy`
+[Sqlite3](https://sqlite.org/)
+
 ##To Set-up:
 Run
 ```
