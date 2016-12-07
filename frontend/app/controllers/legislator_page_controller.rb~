@@ -9,5 +9,6 @@ class LegislatorPageController < ApplicationController
     @description = "#{party} #{@legislator.role.capitalize} from #{US_State.abbreviation_to_full(@legislator.state)}"
     # CODING HORROR here but that's ok
     @profile_pic="http://localhost:3000/l_img/#{@legislator.id}"
+    @contents = [Content.where(author: @legislator.id)]
   end
 end

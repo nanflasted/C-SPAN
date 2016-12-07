@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: MyText
+  type: MyText
+  contents: MyText
+  memebg: MyText
+  replyto: MyText
+  author: MyText
+  committees: 
+
+two:
+  time: MyText
+  type: MyText
+  contents: MyText
+  memebg: MyText
+  replyto: MyText
+  author: MyText
+  committees: 
