@@ -31,7 +31,7 @@ class US_State
               MT: "Montana",
               NC: "North Carolina",
               ND: "North Dakota",
-              "NE": "Nebraska",
+              NE: "Nebraska",
               NH: "New Hampshire",
               NJ: "New Jersey",
               NM: "New Mexico",

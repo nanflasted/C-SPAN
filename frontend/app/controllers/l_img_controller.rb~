@@ -1,5 +1,5 @@
 class LImgController < ApplicationController
   def view
-     send_data :egislator.find(params[:id]).image, :type => 'image/jpg',:disposition => 'inline'
+     send_data Legislator.find(params[:id]).image, :type => 'image/jpg',:disposition => 'inline'
   end
 end
