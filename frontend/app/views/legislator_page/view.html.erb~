@@ -1,0 +1,7 @@
+<h1><%= @name %></h1>
+<img src= <%= @profile_pic %> alt= <%= @name %> style="width:200px;height:200px;">
+
+<p><%= @description %></p>
+
+
+

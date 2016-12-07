@@ -1,0 +1,5 @@
+class SenimageController < ApplicationController
+    def show
+        send_data @legislator.image, :type => 'image/jpg',:disposition => 'inline'
+    end
+end
