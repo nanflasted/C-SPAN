@@ -2600,3 +2600,1689 @@ Processing by LImgController#view as */*
   Rendered text template (0.0ms)
 Sent data  (0.3ms)
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:07:56 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.4ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 234ms (Views: 192.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:07:56 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (3.1ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:08:48 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (2.5ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:08:48 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:09:06 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.4ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:09:07 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:09:08 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:09:08 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:09:12 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.4ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:09:12 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:09:29 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:09:29 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:09:32 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.4ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:09:32 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:09:43 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:09:43 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:09:47 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:09:47 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:10:19 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:10:19 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:10:24 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.4ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:10:25 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:10:38 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:10:38 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:11:17 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:11:17 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:12:07 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:12:07 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:12:11 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:12:11 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:12:17 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.4ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:12:18 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:12:36 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:12:37 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:12:44 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:12:45 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:13:25 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:13:26 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:13:35 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:13:35 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:13:48 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:13:48 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:13:53 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:13:53 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:13:58 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:13:58 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:14:22 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:14:22 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:14:37 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:14:37 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:15:18 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:15:19 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:15:28 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:15:28 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:15:44 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:15:44 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:15:51 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:15:51 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:17:29 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:17:29 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:17:31 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.4ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:17:31 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:17:37 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:17:37 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:17:55 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:17:55 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:17:57 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:17:57 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:18:01 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:18:02 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:18:04 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:18:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:18:12 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:18:12 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:18:19 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:18:19 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:18:56 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:18:57 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:19:10 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:19:11 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:19:21 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:19:21 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:19:22 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:19:22 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:20:49 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:20:50 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:21:09 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:21:09 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:21:36 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:21:36 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:21:56 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:21:56 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:22:04 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:22:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:22:24 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:22:24 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:22:34 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:22:34 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:22:40 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:22:40 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:23:58 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:23:58 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:24:04 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:24:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:24:35 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:24:36 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:25:10 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:25:10 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412670" for 127.0.0.1 at 2016-12-07 00:25:40 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412670"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412670]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412670]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412670" for 127.0.0.1 at 2016-12-07 00:25:41 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412670"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412670]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412669" for 127.0.0.1 at 2016-12-07 00:25:43 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412669"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412669]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412669]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412669" for 127.0.0.1 at 2016-12-07 00:25:43 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412669"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412669]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412668" for 127.0.0.1 at 2016-12-07 00:26:09 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412668"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412668]]
+  [1m[35mContent Load (0.5ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412668]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/l_img/412668" for 127.0.0.1 at 2016-12-07 00:26:09 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412668"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412668]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412667" for 127.0.0.1 at 2016-12-07 00:26:11 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412667"}
+  [1m[35mLegislator Load (0.4ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412667]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412667]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412667" for 127.0.0.1 at 2016-12-07 00:26:11 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412667"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412667]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412666" for 127.0.0.1 at 2016-12-07 00:26:13 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412666"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412666]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412666]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412666" for 127.0.0.1 at 2016-12-07 00:26:13 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412666"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412666]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412665" for 127.0.0.1 at 2016-12-07 00:26:14 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412665"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412665]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412665]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412665" for 127.0.0.1 at 2016-12-07 00:26:14 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412665"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412665]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412664" for 127.0.0.1 at 2016-12-07 00:26:16 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412664"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412664]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412664]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412664" for 127.0.0.1 at 2016-12-07 00:26:16 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412664"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412664]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412663" for 127.0.0.1 at 2016-12-07 00:26:18 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412663"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412663]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412663]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412663" for 127.0.0.1 at 2016-12-07 00:26:18 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412663"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412663]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412662" for 127.0.0.1 at 2016-12-07 00:26:19 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412662"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412662]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412662]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412662" for 127.0.0.1 at 2016-12-07 00:26:19 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412662"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412662]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412661" for 127.0.0.1 at 2016-12-07 00:26:23 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412661"}
+  [1m[35mLegislator Load (0.5ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412661]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412661]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/l_img/412661" for 127.0.0.1 at 2016-12-07 00:26:23 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412661"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412661]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412660" for 127.0.0.1 at 2016-12-07 00:26:25 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412660"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412660]]
+  [1m[35mContent Load (0.5ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412660]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/l_img/412660" for 127.0.0.1 at 2016-12-07 00:26:25 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412660"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412660]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412659" for 127.0.0.1 at 2016-12-07 00:26:36 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412659"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412659]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412659]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412659" for 127.0.0.1 at 2016-12-07 00:26:36 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412659"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412659]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412658" for 127.0.0.1 at 2016-12-07 00:26:37 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412658"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412658]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412658]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412658" for 127.0.0.1 at 2016-12-07 00:26:37 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412658"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412658]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412657" for 127.0.0.1 at 2016-12-07 00:26:39 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412657"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412657]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412657]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412657" for 127.0.0.1 at 2016-12-07 00:26:39 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412657"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412657]]
+  Rendered text template (0.0ms)
+Sent data  (1.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412656" for 127.0.0.1 at 2016-12-07 00:26:40 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412656"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412656]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412656]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412656" for 127.0.0.1 at 2016-12-07 00:26:41 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412656"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412656]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412655" for 127.0.0.1 at 2016-12-07 00:26:42 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412655"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412655]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412655]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412655" for 127.0.0.1 at 2016-12-07 00:26:42 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412655"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412655]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412654" for 127.0.0.1 at 2016-12-07 00:26:44 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412654"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412654]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412654]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412654" for 127.0.0.1 at 2016-12-07 00:26:44 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412654"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412654]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412653" for 127.0.0.1 at 2016-12-07 00:26:45 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412653"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412653]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412653]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412653" for 127.0.0.1 at 2016-12-07 00:26:45 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412653"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412653]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412652" for 127.0.0.1 at 2016-12-07 00:26:47 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412652"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412652]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412652]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412652" for 127.0.0.1 at 2016-12-07 00:26:47 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412652"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412652]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412651" for 127.0.0.1 at 2016-12-07 00:26:50 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412651"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412651]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412651]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412651" for 127.0.0.1 at 2016-12-07 00:26:50 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412651"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412651]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412650" for 127.0.0.1 at 2016-12-07 00:26:51 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412650"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412650]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412650]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412650" for 127.0.0.1 at 2016-12-07 00:26:52 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412650"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412650]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412649" for 127.0.0.1 at 2016-12-07 00:26:56 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412649"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412649]]
+  [1m[36mContent Load (0.4ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412649]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/412649" for 127.0.0.1 at 2016-12-07 00:26:56 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412649"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412649]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412648" for 127.0.0.1 at 2016-12-07 00:26:59 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412648"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412648]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412648]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412648" for 127.0.0.1 at 2016-12-07 00:26:59 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412648"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412648]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412647" for 127.0.0.1 at 2016-12-07 00:27:00 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412647"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412647]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412647]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412647" for 127.0.0.1 at 2016-12-07 00:27:00 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412647"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412647]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412646" for 127.0.0.1 at 2016-12-07 00:27:01 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412646"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412646]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412646]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412646" for 127.0.0.1 at 2016-12-07 00:27:01 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412646"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412646]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412645" for 127.0.0.1 at 2016-12-07 00:27:03 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412645"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412645]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412645]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/412645" for 127.0.0.1 at 2016-12-07 00:27:03 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412645"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412645]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412644" for 127.0.0.1 at 2016-12-07 00:27:04 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412644"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412644]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412644]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412644" for 127.0.0.1 at 2016-12-07 00:27:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412644"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412644]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412643" for 127.0.0.1 at 2016-12-07 00:27:05 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412643"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412643]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412643]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412643" for 127.0.0.1 at 2016-12-07 00:27:05 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412643"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412643]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412642" for 127.0.0.1 at 2016-12-07 00:27:07 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412642"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412642]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412642]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412642" for 127.0.0.1 at 2016-12-07 00:27:07 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412642"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412642]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412641" for 127.0.0.1 at 2016-12-07 00:27:08 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412641"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412641]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412641]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412641" for 127.0.0.1 at 2016-12-07 00:27:09 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412641"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412641]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412640" for 127.0.0.1 at 2016-12-07 00:27:10 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412640"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412640]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412640]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412640" for 127.0.0.1 at 2016-12-07 00:27:10 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412640"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412640]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/41263" for 127.0.0.1 at 2016-12-07 00:27:13 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"41263"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 41263]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Legislator with 'id'=41263):
+  app/controllers/legislator_page_controller.rb:4:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.7ms)
+
+
+Started GET "/legislator_page/41239" for 127.0.0.1 at 2016-12-07 00:27:15 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"41239"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 41239]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Legislator with 'id'=41239):
+  app/controllers/legislator_page_controller.rb:4:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.2ms)
+
+
+Started GET "/legislator_page/412676" for 127.0.0.1 at 2016-12-07 00:27:20 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412676"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412676]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412676]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412676" for 127.0.0.1 at 2016-12-07 00:27:20 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412676"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412676]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412675" for 127.0.0.1 at 2016-12-07 00:27:22 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412675"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412675]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412675]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412675" for 127.0.0.1 at 2016-12-07 00:27:22 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412675"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412675]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412674" for 127.0.0.1 at 2016-12-07 00:27:24 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412674"}
+  [1m[35mLegislator Load (3.8ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412674]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412674]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 25.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/l_img/412674" for 127.0.0.1 at 2016-12-07 00:27:24 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412674"}
+  [1m[35mLegislator Load (0.8ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412674]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/legislator_page/412673" for 127.0.0.1 at 2016-12-07 00:27:26 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412673"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412673]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412673]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412673" for 127.0.0.1 at 2016-12-07 00:27:26 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412673"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412673]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412672" for 127.0.0.1 at 2016-12-07 00:27:27 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412672"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412672]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412672]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/412672" for 127.0.0.1 at 2016-12-07 00:27:27 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412672"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412672]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-07 00:27:28 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-07 00:27:28 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)

@@ -2,21 +2,24 @@
     <tr><td align="CENTER">  
 <img src= <%= @profile_pic %> alt= <%= @name %> style="width:200px;height:200px;float:middle">
 
-        <br>
+  <br>
  
 <h1><font color="lightblue" size = 6><%= @name %></h1>
 <p><font color="lightblue" size = 5><%= @description %></p>
     </td></tr> 
-     </table>
-
-<body>
+</table>
 
 
+<hr>
 <% @contents.each do |c| %>
-  <tr>
-    <td><%= c.content %></td>
-    <td>TYPE IS <%= c.type %></td>
-  </tr>
+<table width="100%" border="0" height="100%" align="CENTER">
+
+<img src= <%= @profile_pic %> alt= <%= @name %> style="width:50px;height:50px;float:left">
+<p style="float:left;margin-left: 10px;"> <font size = 4 ><%=  + c.content %> (<%= c.type %>) </p>
+
+
+
+</table> 
 <% end %>
 
 
