@@ -5,7 +5,7 @@ def main():
     '''Initializes empty log database for the project
        Also removes the old database if it exists, i.e., reset.
     '''
-    conn = dbmngr.connectDB("./data/","dblog",True)
+    conn = dbmngr.connectDB("./log/","log",True)
     if conn is not None:
         #create vote
         d = {
@@ -16,9 +16,10 @@ def main():
                 "stack":    ["text"],
                 "content":  ["text"]
             }
-        dbmngr.createTable(conn,"log",d,f)
+        dbmngr.createTable(conn,"log",d,None)
 
         conn.close()
+    conn.close()
     return
 
 if __name__ == "__main__":  main()

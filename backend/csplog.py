@@ -1,6 +1,7 @@
 import datetime
 import sys
 import os
+import uuid
 import traceback
 import dbmngr
 
@@ -15,11 +16,11 @@ def logexc(exc, verbose = True):
                 "stack"
                 ]
         ins = [
-                unicode(uuid.uuid3(uuid.NAMESPACE_DNS,hash(exc))),
+                unicode(uuid.uuid3(uuid.NAMESPACE_DNS,str(hash(exc)))),
                 u'exception',
                 unicode(datetime.datetime.now()),
-                unicode(exc[1]),
-                unicode(traceback.format_tb(exc[2]))
+                unicode(dbmngr.sanitize(str(exc[1]))),
+                unicode(dbmngr.sanitize(str(traceback.format_tb(exc[2])[0])))
                 ]
         entry = {collist[i]:ins[i] for i in range(len(ins))}
         dbmngr.insertEntry(dbc,"log",entry)
@@ -32,6 +33,7 @@ def logexc(exc, verbose = True):
         return True
     except Exception as e:
         print "rekt",e
+        print traceback.print_tb(sys.exc_info()[2])
         return False
     return False
         
@@ -46,7 +48,7 @@ def logevent(event,description,verbose = True):
                 "content"
                 ]
         ins = [
-                unicode(uuid.uuid3(uuid.NAMESPACE_DNC,hash(exc))),
+                unicode(uuid.uuid3(uuid.NAMESPACE_DNS,str(hash(event)+hash(datetime.datetime.now())))),
                 u'event',
                 unicode(datetime.datetime.now()),
                 unicode(event),

@@ -11,7 +11,11 @@ def sanitize(name):
     Returns:
         safename:   sanitized, sql-safe name
     """
-    return re.sub(r"\\\',",r"",name)
+    safename = re.sub(r'\"',r"",name)
+    safename = re.sub(r"\'",r"",safename)
+    safename = re.sub(r"\\",r"",safename)
+    safename = re.sub(r",",r"",safename)
+    return safename
 
 def connectDB(directory,name,new=False):
     """Connect to a given database, creates one if it doesn't exist
@@ -90,15 +94,18 @@ def insertEntry(conn, table, entry):
         c = conn.cursor()
         execstr = "insert into "+table
         col = "(";val = "("
-        col += ",".join(entry.keys); val += ",".join(entry.values);
+        col += ",".join(entry.keys()); 
+        v = entry.values()
+        v = ["'"+w+"'" for w in v]
+        val += ",".join(v);
         col += ")"; val += ")";
-        execstr += " " + col + " " + val + ");"
+        execstr += " " + col + " values " + val + ";"
         c.execute(execstr)
         conn.commit()
         return True
     except Exception:
-        csplog.logexc(sys.exc_info())
         print execstr
+        csplog.logexc(sys.exc_info())
         return False
     return False
 

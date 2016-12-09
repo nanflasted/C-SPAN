@@ -216,7 +216,7 @@ def genTweets(num,iden,insert = True):
                 "-n",str(numwords),
                 "--sample",str(1)
                 ]).split("\n")[1]]
-        print "tweets" if insert else "reply" + " generation from model complete"
+        print ("tweets" if insert else "reply") + " generation from model complete"
 
         collist = [
             "id",
@@ -408,13 +408,13 @@ def genLikes(contentid, idlist, authorideo=None, ideolist=None):
         else:
             problist = [0.05 for _ in idlist]
         
-        likes = [idlist[i] for i in len(idlist) if random.random() > problist[i]]
+        likes = [idlist[i] for i in xrange(len(idlist)) if random.random() > problist[i]]
         likelist = [[
-            unicode(uuid.uuid3(uuid.NAMESPACE_DNS,str(i)+contentid)+'l'),
+            unicode(uuid.uuid3(uuid.NAMESPACE_DNS,str(i)+str(contentid)+'l')),
             i,
             contentid
             ] for i in likes]
-        if not dbmngr.insertMany(dbc,"votes",collist,voteres):
+        if not dbmngr.insertMany(dbc,"votes",collist,likelist):
             raise Exception("Database Insertion Error at genVotes")
         dbc.close()
         return likes
@@ -427,11 +427,15 @@ def genLikes(contentid, idlist, authorideo=None, ideolist=None):
 
 def populate(t,r,insert = True):
     try:
-        dbc = dbmngr.connectDB("./data/","cspdb",False)
-        idlist = dbmngr.queryEntry(dbc,["id"],["legislators"]).fetchall()
-        dbc.close()
+        idlist = None
+        if r > 0:
+            dbc = dbmngr.connectDB("./data/","cspdb",False)
+            idlist = dbmngr.queryEntry(dbc,["id"],["legislators"]).fetchall()
+            dbc.close()
+        if t == 0:  return True
         for l in idlist:
             tweets = genTweets(t,l,True)
+            if r == 0:  continue
             for tw in tweets:
                 reper = random.choice(idlist)
                 genReplies(r,reper,tw[0])

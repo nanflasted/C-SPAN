@@ -93,7 +93,7 @@ def populate(t=5,m=0,b=10,r=1):
             bill = dbpopl.genBills(1,random.choice(com),(random.choice(twac.keys()),))
             genVotes(bill[0][0],twac.keys())
             genLikes(bill[0][0],twac.keys())
-        csplog.logevent("populate","Basic Database population")
+        csplog.logevent("populate","Basic Database population finished")
         return True 
     except Exception:
         return False
