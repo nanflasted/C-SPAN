@@ -24,18 +24,21 @@ class LegislatorPageController < ApplicationController
     return "http://localhost:3000/l_img/#{id}"
   end
 
-  def get_likes_subtext(c)
-    likers = Like.where(cid: c.id).map{ |l| Legislator.find(l.lid)}
+  def get_likes_subtext(c2)
+   out = "SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = \"#{c2.id}\";" 
+   likes = ActiveRecord::Base.connection_pool.with_connection { |con| con.exec_query(out ) }.rows
+
     # now we have id's of all the people who like the content
-    if likers.count == 0
+    if likes.count == 0
         return "No one likes this post" 
-    if likers.count == 1
-        return "#{likers[0].name} likes this post"
-    elsif likers.count == 2
-        return "#{likers[0].name} and #{likers[1].name} like this post"
-    else
-        return "#{likers[0].name}, #{likers[1].name}, and {likers.count-2} more like this post"
+    elsif likes.count == 1
+        return "#{likes[0][0]} likes this post"
+    elsif likes.count == 2
+        return "#{likes[0][0]} and #{likes[1][0]} like this post"
+    else 
+       return "#{likes[0][0]}, #{likes[1][0]}, and #{likes.count - 2} others like this post"
     end
+    
   end
     
 end

@@ -17,7 +17,7 @@
 
 <font color="black">
     <% if c.type == "reply" #replied to someone %>
-        <img src= <%= get_img_link(c.id) %> alt= <%= @name %> style="width:50px;height:50px;float:left">
+        <img src= <%= @profile_pic %> alt= <%= @name %> style="width:50px;height:50px;float:left">
         <p style="margin-left: 70px;"> <font size = 4 >REPLY: <%=  c.content %> </p>
     <% elsif c.type == "post" %>
         <img src= <%= @profile_pic  %> alt= <%= @name %> style="width:50px;height:50px;float:left">
