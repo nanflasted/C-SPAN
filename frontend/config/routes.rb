@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   get 'legislator_page/:id' => 'legislator_page#view'
   get 'l_img/:id' => "l_img#view"
-
+  get '*path', :to => 'homepage#view'
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -52,3 +52,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
+

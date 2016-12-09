@@ -10,7 +10,13 @@ class LegislatorPageController < ApplicationController
   helper_method :get_nay
 
   def view
-    @legislator = Legislator.find(params[:id])
+    
+    begin
+        @legislator = Legislator.find(params[:id])
+    rescue
+        redirect_to "/"
+        return
+    end
     # Get name
     @name = @legislator.name
     # Get description, i.e. "Senator from New York"

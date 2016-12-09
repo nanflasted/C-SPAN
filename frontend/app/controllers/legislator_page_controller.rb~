@@ -10,7 +10,12 @@ class LegislatorPageController < ApplicationController
   helper_method :get_nay
 
   def view
-    @legislator = Legislator.find(params[:id])
+    
+    begin
+        @legislator = Legislator.find(params[:id])
+    rescue
+        redirect_to "/"
+    end
     # Get name
     @name = @legislator.name
     # Get description, i.e. "Senator from New York"
@@ -65,13 +70,13 @@ class LegislatorPageController < ApplicationController
   def get_yea(bill)
     out = "SELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = \"#{bill.id}\" AND V.VOTES = \"yea\"";
     res = ActiveRecord::Base.connection_pool.with_connection { |con| con.exec_query(out ) }.rows
-    return res[0][0]
+    return res[0][0].to_s
   end
 
   def get_nay(bill)
     out = "SELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = \"#{bill.id}\" AND V.VOTES = \"nay\"";
     res = ActiveRecord::Base.connection_pool.with_connection { |con| con.exec_query(out ) }.rows
-    return res[0][0]
+    return res[0][0].to_s
   end
    
 end

@@ -22385,3 +22385,1026 @@ Processing by LImgController#view as */*
   Rendered text template (0.0ms)
 Sent data  (0.4ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 02:17:56 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.4ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.1ms)[0m  [1mSELECT C.NAME FROM COMMITTEES C WHERE C.id = "2872";[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = "104b8f32-0cf5-3d27-b9af-d37fd5f3b215" AND V.VOTES = "yea"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = "104b8f32-0cf5-3d27-b9af-d37fd5f3b215" AND V.VOTES = "nay"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = "104b8f32-0cf5-3d27-b9af-d37fd5f3b215" AND V.VOTES = "yea"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = "104b8f32-0cf5-3d27-b9af-d37fd5f3b215" AND V.VOTES = "nay"[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d06e6518-9cd4-3b14-ba50-15db6b406931"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d217490d-1adb-3bac-b311-132896515489";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aff4a940-5940-32a7-a0f4-6f76492f2fb8";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "82bce6c5-1ee0-3e36-b71b-c92bd9606fc0";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1e1a4af-8ba9-3b39-9194-e3309835a799";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "35c8733f-2d4a-3696-835f-7fd111fb6d41";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fe7f152e-e7da-374f-8550-7873275aadb3";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "8e560567-fe26-3a16-8ee2-b723f05c7bf0";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "895736df-f3a3-3350-89e1-edb839fce468";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "780866e4-8ad7-3634-adbc-f3cb140b6648";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "86a08197-365a-368f-ac2b-c5b644fdf236";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "4a5ee309-d1b8-3f3f-be33-2468d58a5a92";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7f8704dc-1a93-3606-bcca-decd7ef16930";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "83834c4a-b247-3471-b9e4-ac6debd03947"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "ded4b1c7-6029-35ac-b336-d110cdbffa48"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "effaf33d-7197-3235-9b98-3fff2ce2e17a"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "b240bd8d-1371-3540-b2e6-404ffd9aa2a4"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d581340c-7e15-3fae-be10-5e07f9581826"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "f994c517-3a36-3357-9111-99f4e52a0785"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "76f3a1cb-262e-369d-89c3-0d6b2765fae8"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d461a02b-2519-3f7c-af0d-d936b3fcabde"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fca79358-3fa9-3c62-8fad-69aff7530039"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "b34994fe-873c-3ee7-9fda-8814dc41c682"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "17e1d9ec-2a67-3881-835e-d9495e6a9856"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "502924c1-34d4-3fd7-ba35-016a5c30b7b4"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "10747301-6a35-3eee-9817-3bfbca6daf26"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fb3aba9b-268b-354f-a358-d8d850ac7e16"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1ced51ad-4bcd-3528-90d6-a62fc716ceea";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f2219197-6f01-3285-839d-369fded2920c";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9a89fa43-1e16-39b4-9d24-4e12b9858a7e";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "a834dba1-9425-3151-800c-b2b84342d3d1"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9e6907e8-afb4-3388-a103-3fd109fe0430";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "479d3e33-4a59-3122-8bcd-d9b04adbe690";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1254faa-d1af-3446-b4cd-5b7e98989617";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fcd3036e-a126-3a96-a79e-749b483ecbeb"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7dcf4b38-1889-3bd3-8c2c-fd7e0a305be0";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "46286fb5-9098-36b7-90c9-a00751e80dc9";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "dbdbd8c4-a5ea-3f6d-964f-939b8a8d8f85";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "9625dc12-87cb-351e-9672-a0e77ffc871c"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "3057730f-d135-3448-8062-5e50b0fa1186";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "de58d5fa-5373-3a27-85bf-aae6dc9f3280";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f1e870c6-72d6-3a7b-905c-a41d7cb62d1f";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 257ms (Views: 202.4ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 02:17:57 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (2.8ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/400654" for 127.0.0.1 at 2016-12-09 02:17:57 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400654"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 400654]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/412257" for 127.0.0.1 at 2016-12-09 02:17:57 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412257"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412257]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/412419" for 127.0.0.1 at 2016-12-09 02:17:57 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412419"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412419]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/412634" for 127.0.0.1 at 2016-12-09 02:17:57 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412634"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412634]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 02:18:21 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.8ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.3ms)[0m  [1mSELECT C.NAME FROM COMMITTEES C WHERE C.id = "2872";[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = "104b8f32-0cf5-3d27-b9af-d37fd5f3b215" AND V.VOTES = "yea"
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = "104b8f32-0cf5-3d27-b9af-d37fd5f3b215" AND V.VOTES = "nay"[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = "104b8f32-0cf5-3d27-b9af-d37fd5f3b215" AND V.VOTES = "yea"
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = "104b8f32-0cf5-3d27-b9af-d37fd5f3b215" AND V.VOTES = "nay"[0m
+  [1m[35m (0.3ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";
+  [1m[36mContent Load (0.4ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d06e6518-9cd4-3b14-ba50-15db6b406931"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d217490d-1adb-3bac-b311-132896515489";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aff4a940-5940-32a7-a0f4-6f76492f2fb8";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "82bce6c5-1ee0-3e36-b71b-c92bd9606fc0";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1e1a4af-8ba9-3b39-9194-e3309835a799";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "35c8733f-2d4a-3696-835f-7fd111fb6d41";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fe7f152e-e7da-374f-8550-7873275aadb3";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "8e560567-fe26-3a16-8ee2-b723f05c7bf0";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "895736df-f3a3-3350-89e1-edb839fce468";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "780866e4-8ad7-3634-adbc-f3cb140b6648";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "86a08197-365a-368f-ac2b-c5b644fdf236";[0m
+  [1m[35m (0.3ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "4a5ee309-d1b8-3f3f-be33-2468d58a5a92";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7f8704dc-1a93-3606-bcca-decd7ef16930";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";
+  [1m[36mContent Load (0.5ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "83834c4a-b247-3471-b9e4-ac6debd03947"]]
+  [1m[35m (0.3ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "ded4b1c7-6029-35ac-b336-d110cdbffa48"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "effaf33d-7197-3235-9b98-3fff2ce2e17a"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "b240bd8d-1371-3540-b2e6-404ffd9aa2a4"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d581340c-7e15-3fae-be10-5e07f9581826"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "f994c517-3a36-3357-9111-99f4e52a0785"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "76f3a1cb-262e-369d-89c3-0d6b2765fae8"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d461a02b-2519-3f7c-af0d-d936b3fcabde"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fca79358-3fa9-3c62-8fad-69aff7530039"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "b34994fe-873c-3ee7-9fda-8814dc41c682"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "17e1d9ec-2a67-3881-835e-d9495e6a9856"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "502924c1-34d4-3fd7-ba35-016a5c30b7b4"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "10747301-6a35-3eee-9817-3bfbca6daf26"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fb3aba9b-268b-354f-a358-d8d850ac7e16"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1ced51ad-4bcd-3528-90d6-a62fc716ceea";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f2219197-6f01-3285-839d-369fded2920c";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9a89fa43-1e16-39b4-9d24-4e12b9858a7e";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "a834dba1-9425-3151-800c-b2b84342d3d1"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9e6907e8-afb4-3388-a103-3fd109fe0430";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "479d3e33-4a59-3122-8bcd-d9b04adbe690";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1254faa-d1af-3446-b4cd-5b7e98989617";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fcd3036e-a126-3a96-a79e-749b483ecbeb"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7dcf4b38-1889-3bd3-8c2c-fd7e0a305be0";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "46286fb5-9098-36b7-90c9-a00751e80dc9";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "dbdbd8c4-a5ea-3f6d-964f-939b8a8d8f85";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "9625dc12-87cb-351e-9672-a0e77ffc871c"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "3057730f-d135-3448-8062-5e50b0fa1186";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "de58d5fa-5373-3a27-85bf-aae6dc9f3280";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f1e870c6-72d6-3a7b-905c-a41d7cb62d1f";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 86ms (Views: 67.8ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 02:18:21 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/400654" for 127.0.0.1 at 2016-12-09 02:18:21 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400654"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 400654]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/412257" for 127.0.0.1 at 2016-12-09 02:18:21 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412257"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412257]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/412419" for 127.0.0.1 at 2016-12-09 02:18:21 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412419"}
+  [1m[36mLegislator Load (0.9ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412419]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/l_img/412634" for 127.0.0.1 at 2016-12-09 02:18:21 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412634"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412634]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300012" for 127.0.0.1 at 2016-12-09 02:20:08 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300012"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300012]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Legislator with 'id'=300012):
+  app/controllers/legislator_page_controller.rb:13:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.7ms)
+
+
+Started GET "/legislator_page/300012" for 127.0.0.1 at 2016-12-09 02:24:03 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300012"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300012]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.9ms)
+
+NoMethodError (undefined method `redirect_back' for #<LegislatorPageController:0x007f7569fde360>
+Did you mean?  redirect_to):
+  app/controllers/legislator_page_controller.rb:17:in `rescue in view'
+  app/controllers/legislator_page_controller.rb:14:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.0ms)
+
+
+Started GET "/legislator_page/300012" for 127.0.0.1 at 2016-12-09 02:24:11 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300012"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300012]]
+Redirected to http://localhost:3000/legislator_page/300012?fallback_location=%2F
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/legislator_page_controller.rb:20:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.6ms)
+
+
+Started GET "/legislator_page/300012" for 127.0.0.1 at 2016-12-09 02:24:18 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300012"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300012]]
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/legislator_page_controller.rb:20:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.3ms)
+
+
+Started GET "/legislator_page/300012" for 127.0.0.1 at 2016-12-09 02:24:20 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300012"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300012]]
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/legislator_page_controller.rb:20:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.5ms)
+
+
+Started GET "/legislator_page/300013" for 127.0.0.1 at 2016-12-09 02:24:34 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300013"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300013]]
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/legislator_page_controller.rb:20:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (23.6ms)
+
+
+Started GET "/legislator_page/300012" for 127.0.0.1 at 2016-12-09 02:24:36 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300012"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300012]]
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/legislator_page_controller.rb:20:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.9ms)
+
+
+Started GET "/legislator_page/300002" for 127.0.0.1 at 2016-12-09 02:24:37 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300002"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300002]]
+  [1m[36mContent Load (0.9ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 300002]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a8761f94-6545-3d8b-8a3d-3f5bc7ed17fa";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "a8761f94-6545-3d8b-8a3d-3f5bc7ed17fa"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1fb65395-6079-33b7-b980-c2cd68f94350";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "8472566d-0199-3eb7-b179-2bfd070e8b1d";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a3454d17-6058-37d1-bd48-003cfa896557";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "183fbbf7-bf74-3a1e-a51d-2535123ec09d";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "183fbbf7-bf74-3a1e-a51d-2535123ec09d"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b46245a8-10ac-302c-a20a-b6042d35e2d1";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "b46245a8-10ac-302c-a20a-b6042d35e2d1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "dd081653-6022-3b29-a27e-8a00fecfe461";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a85ef321-883c-39b0-9415-db8dde99bcbc";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ddcf7376-6fc4-31d2-a749-397a7f7ebee4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f900427f-8f4c-36ad-a032-b84e9c10d27a";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "f900427f-8f4c-36ad-a032-b84e9c10d27a"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "4652613e-5fde-3025-9207-e8eb221b3c60";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9c4d29ae-696d-3e99-9446-75026be41ccc";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "213dee10-ef6c-3027-bc10-46c99b0693de";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "6a086681-061b-3283-8ebc-73e4f313a3a1";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "6a086681-061b-3283-8ebc-73e4f313a3a1"]]
+  Rendered legislator_page/view.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 36ms (Views: 20.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/l_img/300002" for 127.0.0.1 at 2016-12-09 02:24:37 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300002"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300002]]
+  Rendered text template (0.0ms)
+Sent data  (2.7ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412199" for 127.0.0.1 at 2016-12-09 02:24:37 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412199"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412199]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/412627" for 127.0.0.1 at 2016-12-09 02:24:37 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412627"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412627]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412282" for 127.0.0.1 at 2016-12-09 02:24:37 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412282"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412282]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/300003" for 127.0.0.1 at 2016-12-09 02:24:39 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300003"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300003]]
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/legislator_page_controller.rb:20:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.7ms)
+
+
+Started GET "/legislator_page/300003" for 127.0.0.1 at 2016-12-09 02:25:12 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300003"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300003]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:25:12 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.7ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislator_page/300048" for 127.0.0.1 at 2016-12-09 02:25:17 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300048"}
+  [1m[36mLegislator Load (0.5ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300048]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300048]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 25.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/l_img/300048" for 127.0.0.1 at 2016-12-09 02:25:17 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300048"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300048]]
+  Rendered text template (0.0ms)
+Sent data  (2.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:25:49 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/2" for 127.0.0.1 at 2016-12-09 02:26:03 -0500
+
+ActionController::RoutingError (No route matches [GET] "/2"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:26:05 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislator_page/300025" for 127.0.0.1 at 2016-12-09 02:32:51 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300025"}
+  [1m[36mLegislator Load (0.4ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300025]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300025]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9917a873-9118-323f-931b-09dc2d16e362";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "9917a873-9118-323f-931b-09dc2d16e362"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1e3b96d8-bed2-3033-a59a-19c03cea52f8";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "1e3b96d8-bed2-3033-a59a-19c03cea52f8"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "6eb89fd9-3652-334e-b3d3-8109c508eca5";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "6eb89fd9-3652-334e-b3d3-8109c508eca5"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "6d2ce99e-a016-312c-b8e3-bbf056a7eb66";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "6d2ce99e-a016-312c-b8e3-bbf056a7eb66"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "500fdaae-9228-339c-8321-9d0a26b18184";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "500fdaae-9228-339c-8321-9d0a26b18184"]]
+  Rendered legislator_page/view.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 340ms (Views: 296.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/homepage.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-12-09 02:32:52 -0500
+
+
+Started GET "/assets/homepage.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-12-09 02:32:52 -0500
+
+
+Started GET "/l_img/300025" for 127.0.0.1 at 2016-12-09 02:32:52 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300025"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300025]]
+  Rendered text template (0.0ms)
+Sent data  (4.6ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:32:54 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:32:56 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:33:15 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:33:16 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/23" for 127.0.0.1 at 2016-12-09 02:33:44 -0500
+
+ActionController::RoutingError (No route matches [GET] "/23"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.3ms)
+
+
+Started GET "/232636632" for 127.0.0.1 at 2016-12-09 02:33:47 -0500
+
+ActionController::RoutingError (No route matches [GET] "/232636632"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:34:56 -0500
+
+ArgumentError (You should not use the `match` method in your router without specifying an HTTP method.
+If you want to expose your action to both GET and POST, add `via: [:get, :post]` option.
+If you want to expose your action to GET, use `get` in the router:
+  Instead of: match "controller#action"
+  Do: get "controller#action"):
+  config/routes.rb:11:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:35:20 -0500
+
+SyntaxError (/home/jack/cspan/frontend/config/routes.rb:11: syntax error, unexpected ':', expecting keyword_end
+  via: [:get, :post] => '*unmatched_route', :to => 'homepage#view'
+      ^
+/home/jack/cspan/frontend/config/routes.rb:11: syntax error, unexpected =>, expecting keyword_end
+  via: [:get, :post] => '*unmatched_route', :to => 'homepage#view'
+                       ^
+/home/jack/cspan/frontend/config/routes.rb:11: syntax error, unexpected ',', expecting keyword_end
+  via: [:get, :post] => '*unmatched_route', :to => 'homepage#view'
+                                           ^):
+  config/routes.rb:11: syntax error, unexpected ':', expecting keyword_end
+  config/routes.rb:11: syntax error, unexpected =>, expecting keyword_end
+  config/routes.rb:11: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:35:36 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:35:43 -0500
+Processing by HomepageController#view as HTML
+  Rendered homepage/view.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ewr" for 127.0.0.1 at 2016-12-09 02:35:46 -0500
+
+ActionController::RoutingError (No route matches [GET] "/ewr"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.4ms)
+
+
+Started GET "/e" for 127.0.0.1 at 2016-12-09 02:35:50 -0500
+
+ActionController::RoutingError (No route matches [GET] "/e"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:35:54 -0500
+Processing by HomepageController#view as HTML
+  Rendered homepage/view.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-09 02:36:01 -0500
+Processing by HomepageController#view as HTML
+  Rendered homepage/view.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/0" for 127.0.0.1 at 2016-12-09 02:36:03 -0500
+
+ActionController::RoutingError (No route matches [GET] "/0"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jack/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.0ms)
+
+
+Started GET "/0" for 127.0.0.1 at 2016-12-09 02:36:43 -0500
+Processing by HomepageController#view as HTML
+  Parameters: {"path"=>"0"}
+  Rendered homepage/view.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/0932" for 127.0.0.1 at 2016-12-09 02:36:45 -0500
+Processing by HomepageController#view as HTML
+  Parameters: {"path"=>"0932"}
+  Rendered homepage/view.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vdsivdsbvds" for 127.0.0.1 at 2016-12-09 02:36:48 -0500
+Processing by HomepageController#view as HTML
+  Parameters: {"path"=>"vdsivdsbvds"}
+  Rendered homepage/view.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sufisduybrew" for 127.0.0.1 at 2016-12-09 02:36:51 -0500
+Processing by HomepageController#view as HTML
+  Parameters: {"path"=>"sufisduybrew"}
+  Rendered homepage/view.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislator_page/300025" for 127.0.0.1 at 2016-12-09 02:36:55 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300025"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300025]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 300025]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9917a873-9118-323f-931b-09dc2d16e362";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "9917a873-9118-323f-931b-09dc2d16e362"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1e3b96d8-bed2-3033-a59a-19c03cea52f8";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "1e3b96d8-bed2-3033-a59a-19c03cea52f8"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "6eb89fd9-3652-334e-b3d3-8109c508eca5";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "6eb89fd9-3652-334e-b3d3-8109c508eca5"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "6d2ce99e-a016-312c-b8e3-bbf056a7eb66";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "6d2ce99e-a016-312c-b8e3-bbf056a7eb66"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "500fdaae-9228-339c-8321-9d0a26b18184";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "500fdaae-9228-339c-8321-9d0a26b18184"]]
+  Rendered legislator_page/view.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 22.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/l_img/300025" for 127.0.0.1 at 2016-12-09 02:36:55 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300025"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300025]]
+  Rendered text template (0.0ms)
+Sent data  (2.6ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
