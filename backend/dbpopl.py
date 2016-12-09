@@ -376,10 +376,10 @@ def genVotes(billid,voters):
                 "id",
                 "lid",
                 "cid",
-                "vote"
+                "votes"
                 ]
         voteres = [[
-            unicode(uuid.uuid3(uuid.NAMESPACE_DNS,str(i)+billid)),
+            unicode(uuid.uuid3(uuid.NAMESPACE_DNS,str(i)+str(billid))),
             i,
             billid,
             "yea" if random.choice(range(2))>0 else "nay"

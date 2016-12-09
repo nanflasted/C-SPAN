@@ -78,7 +78,8 @@ def main():
         d = {
                 "id":       ["text","primary key","not null"],
                 "lid":      ["int","not null"],
-                "cid":      ["text","not null"]
+                "cid":      ["text","not null"],
+                "votes":     ["text","not null"]
             }
         f = {
                 "lid":      "legislators(id)",
