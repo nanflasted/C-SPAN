@@ -9929,3 +9929,1170 @@ Processing by LImgController#view as */*
   Rendered text template (0.0ms)
 Sent data  (0.4ms)
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/300025" for 127.0.0.1 at 2016-12-08 23:35:18 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300025"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300025]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300025]]
+  Rendered legislator_page/view.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (undefined method `content' for #<Content:0x0056478b070ea8>
+Did you mean?  contents
+               contents?
+               contents=):
+    21:         <p style="margin-left: 70px;"> <font size = 4 >REPLY: <%=  c.content %> </p>
+    22:     <% elsif c.type == "post" %>
+    23:         <img src= <%= @profile_pic  %> alt= <%= @name %> style="width:50px;height:50px;float:left">
+    24:         <p style="margin-left: 70px; "> <font size = 4 > <%= c.content.force_encoding("utf-8") %><br>
+    25:         <font size = 3> <font color=#770000> <%= get_likes_subtext(c) %></p>
+    26:     <% end %>
+    27: 
+  app/views/legislator_page/view.html.erb:24:in `block in _app_views_legislator_page_view_html_erb___713194172912905573_47432634330580'
+  app/views/legislator_page/view.html.erb:14:in `_app_views_legislator_page_view_html_erb___713194172912905573_47432634330580'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.4ms)
+
+
+Started GET "/legislator_page/300025" for 127.0.0.1 at 2016-12-08 23:36:48 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300025"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300025]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300025]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "c9b06c2a-63b0-3640-9148-05b0a969cb66";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 285ms (Views: 280.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/l_img/300025" for 127.0.0.1 at 2016-12-08 23:36:48 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300025"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300025]]
+  Rendered text template (0.0ms)
+Sent data  (3.1ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/300025" for 127.0.0.1 at 2016-12-08 23:36:48 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300025"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300025]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300001" for 127.0.0.1 at 2016-12-08 23:37:03 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300001"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300001]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Legislator with 'id'=300001):
+  app/controllers/legislator_page_controller.rb:8:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.8ms)
+
+
+Started GET "/legislator_page/300002" for 127.0.0.1 at 2016-12-08 23:37:05 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300002"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300002]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300002]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "952483ad-8f26-3136-bf67-0843fe808f9c";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/300002" for 127.0.0.1 at 2016-12-08 23:37:05 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300002"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300002]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/300002" for 127.0.0.1 at 2016-12-08 23:38:00 -0500
+Processing by LImgController#view as HTML
+  Parameters: {"id"=>"300002"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300002]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/300001" for 127.0.0.1 at 2016-12-08 23:38:05 -0500
+Processing by LImgController#view as HTML
+  Parameters: {"id"=>"300001"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300001]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Legislator with 'id'=300001):
+  app/controllers/l_img_controller.rb:3:in `view'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.2ms)
+
+
+Started GET "/l_img/300002" for 127.0.0.1 at 2016-12-08 23:38:06 -0500
+Processing by LImgController#view as HTML
+  Parameters: {"id"=>"300002"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300002]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/300002" for 127.0.0.1 at 2016-12-08 23:46:34 -0500
+Processing by LImgController#view as HTML
+  Parameters: {"id"=>"300002"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300002]]
+  Rendered text template (0.0ms)
+Sent data  (5.1ms)
+Completed 200 OK in 46ms (Views: 5.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/legislator_page/412671" for 127.0.0.1 at 2016-12-08 23:46:41 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.7ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412671]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 182ms (Views: 177.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/l_img/412671" for 127.0.0.1 at 2016-12-08 23:46:42 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412671"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412671]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 23:54:53 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.1ms)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/legislator_page/300002" for 127.0.0.1 at 2016-12-08 23:54:56 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300002"}
+  [1m[36mLegislator Load (0.4ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300002]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300002]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "6a086681-061b-3283-8ebc-73e4f313a3a1";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f900427f-8f4c-36ad-a032-b84e9c10d27a";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b46245a8-10ac-302c-a20a-b6042d35e2d1";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "183fbbf7-bf74-3a1e-a51d-2535123ec09d";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a8761f94-6545-3d8b-8a3d-3f5bc7ed17fa";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 270ms (Views: 197.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/l_img/300002" for 127.0.0.1 at 2016-12-08 23:54:56 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300002"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300002]]
+  Rendered text template (0.0ms)
+Sent data  (3.8ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/300025" for 127.0.0.1 at 2016-12-08 23:55:02 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300025"}
+  [1m[36mLegislator Load (0.6ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300025]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300025]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "500fdaae-9228-339c-8321-9d0a26b18184";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "6d2ce99e-a016-312c-b8e3-bbf056a7eb66";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "6eb89fd9-3652-334e-b3d3-8109c508eca5";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1e3b96d8-bed2-3033-a59a-19c03cea52f8";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9917a873-9118-323f-931b-09dc2d16e362";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 65ms (Views: 24.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/l_img/300025" for 127.0.0.1 at 2016-12-08 23:55:02 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300025"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300025]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/300052" for 127.0.0.1 at 2016-12-08 23:55:09 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300052"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300052]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300052]]
+  Rendered legislator_page/view.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/l_img/300052" for 127.0.0.1 at 2016-12-08 23:55:09 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300052"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300052]]
+  Rendered text template (0.0ms)
+Sent data  (1.4ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-08 23:55:13 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  [1m[36mContent Load (1.0ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 300011]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";
+  Rendered legislator_page/view.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 60ms (Views: 54.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-08 23:55:13 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (2.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:00:27 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";
+  Rendered legislator_page/view.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 224ms (Views: 180.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:00:27 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (2.6ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:04:50 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";
+  Rendered legislator_page/view.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 240ms (Views: 188.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:04:51 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (3.9ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:07:14 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";
+  Rendered legislator_page/view.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 3.5ms)
+
+ActionView::Template::Error (undefined method `content' for #<Content:0x00564a2a5b38b0>
+Did you mean?  contents
+               contents?
+               contents=):
+    18: <font color="black">
+    19:     <% if c.type == "reply" #replied to someone %>
+    20:         <img src= <%= @profile_pic %> alt= <%= @name %> style="width:50px;height:50px;float:left">
+    21:         <p style="margin-left: 70px;"> <font size = 4 >REPLY: <%=  c.content %> </p>
+    22:     <% elsif c.type == "post" %>
+    23:         <img src= <%= @profile_pic  %> alt= <%= @name %> style="width:50px;height:50px;float:left">
+    24:         <p style="margin-left: 70px; "> <font size = 4 > <%= c.contents.force_encoding("utf-8") %><br>
+  app/views/legislator_page/view.html.erb:21:in `block in _app_views_legislator_page_view_html_erb__2548427531488863398_47438263934700'
+  app/views/legislator_page/view.html.erb:14:in `_app_views_legislator_page_view_html_erb__2548427531488863398_47438263934700'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.4ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:08:37 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.4ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.3ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";
+  [1m[36m (1.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";
+  Rendered legislator_page/view.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 254ms (Views: 245.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:08:37 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (2.7ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:10:04 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  [1m[36mContent Load (0.6ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 300011]]
+  [1m[35m (0.3ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";
+  [1m[36m (0.3ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 41ms (Views: 31.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:10:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:10:56 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (1.4ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";[0m
+  [1m[35m (1.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";[0m
+  [1m[35m (9.0ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";
+  Rendered legislator_page/view.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 79ms (Views: 57.8ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:10:57 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:14:59 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  [1m[36mContent Load (0.4ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 300011]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";
+  Rendered legislator_page/view.html.erb within layouts/application (24.4ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (undefined local variable or method `replies' for #<#<Class:0x007f4b8a3df478>:0x007f4b8a3eb368>
+Did you mean?  readlines):
+    23:         <font size = 3> <font color=#770000> <%= get_likes_subtext(c) %></p>
+    24:         
+    25:         <% # Fetch Replies %> 
+    26:         <% replies.each do |r| %>
+    27:             <img src= <%= get_img_link(r.author)  %> alt= <%= @name %> style="width:30px;height:30px;float:left">
+    28:             <p style="margin-left: 50px; "> <font size = 3 > <%= r.contents.force_encoding("utf-8") %><br>
+    29:             <font size = 2> <font color=#770000> <%= get_likes_subtext(r) %></p>
+  app/views/legislator_page/view.html.erb:26:in `block in _app_views_legislator_page_view_html_erb__2548427531488863398_69981209317360'
+  app/views/legislator_page/view.html.erb:14:in `_app_views_legislator_page_view_html_erb__2548427531488863398_69981209317360'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.6ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:15:12 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.7ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.5ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "9625dc12-87cb-351e-9672-a0e77ffc871c"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "3057730f-d135-3448-8062-5e50b0fa1186";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "de58d5fa-5373-3a27-85bf-aae6dc9f3280";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f1e870c6-72d6-3a7b-905c-a41d7cb62d1f";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fcd3036e-a126-3a96-a79e-749b483ecbeb"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7dcf4b38-1889-3bd3-8c2c-fd7e0a305be0";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "46286fb5-9098-36b7-90c9-a00751e80dc9";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "dbdbd8c4-a5ea-3f6d-964f-939b8a8d8f85";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "a834dba1-9425-3151-800c-b2b84342d3d1"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9e6907e8-afb4-3388-a103-3fd109fe0430";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "479d3e33-4a59-3122-8bcd-d9b04adbe690";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1254faa-d1af-3446-b4cd-5b7e98989617";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fb3aba9b-268b-354f-a358-d8d850ac7e16"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1ced51ad-4bcd-3528-90d6-a62fc716ceea";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f2219197-6f01-3285-839d-369fded2920c";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9a89fa43-1e16-39b4-9d24-4e12b9858a7e";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "10747301-6a35-3eee-9817-3bfbca6daf26"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "502924c1-34d4-3fd7-ba35-016a5c30b7b4"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "17e1d9ec-2a67-3881-835e-d9495e6a9856"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "b34994fe-873c-3ee7-9fda-8814dc41c682"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "fca79358-3fa9-3c62-8fad-69aff7530039"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "d461a02b-2519-3f7c-af0d-d936b3fcabde"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "76f3a1cb-262e-369d-89c3-0d6b2765fae8"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "f994c517-3a36-3357-9111-99f4e52a0785"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "d581340c-7e15-3fae-be10-5e07f9581826"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "b240bd8d-1371-3540-b2e6-404ffd9aa2a4"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "effaf33d-7197-3235-9b98-3fff2ce2e17a"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "ded4b1c7-6029-35ac-b336-d110cdbffa48"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "83834c4a-b247-3471-b9e4-ac6debd03947"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "d06e6518-9cd4-3b14-ba50-15db6b406931"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d217490d-1adb-3bac-b311-132896515489";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aff4a940-5940-32a7-a0f4-6f76492f2fb8";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "82bce6c5-1ee0-3e36-b71b-c92bd9606fc0";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1e1a4af-8ba9-3b39-9194-e3309835a799";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "35c8733f-2d4a-3696-835f-7fd111fb6d41";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fe7f152e-e7da-374f-8550-7873275aadb3";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "8e560567-fe26-3a16-8ee2-b723f05c7bf0";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "895736df-f3a3-3350-89e1-edb839fce468";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "780866e4-8ad7-3634-adbc-f3cb140b6648";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "86a08197-365a-368f-ac2b-c5b644fdf236";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "4a5ee309-d1b8-3f3f-be33-2468d58a5a92";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7f8704dc-1a93-3606-bcca-decd7ef16930";
+  Rendered legislator_page/view.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 46ms (Views: 33.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/l_img/412634" for 127.0.0.1 at 2016-12-09 00:15:13 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412634"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412634]]
+  Rendered text template (0.0ms)
+Sent data  (2.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412419" for 127.0.0.1 at 2016-12-09 00:15:13 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412419"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412419]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/l_img/400654" for 127.0.0.1 at 2016-12-09 00:15:13 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400654"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 400654]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/412257" for 127.0.0.1 at 2016-12-09 00:15:13 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412257"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412257]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:15:13 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:16:06 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  [1m[36mContent Load (0.6ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 300011]]
+  Rendered legislator_page/view.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.8ms)
+
+SyntaxError (/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...et_likes_subtext(r) <font color=#000000>);@output_buffer.saf...
+...                               ^
+/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:35: syntax error, unexpected '<', expecting ')'
+</table> 
+ ^
+/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:35: unterminated regexp meets end of file):
+  app/views/legislator_page/view.html.erb:29: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+  app/views/legislator_page/view.html.erb:35: syntax error, unexpected '<', expecting ')'
+  app/views/legislator_page/view.html.erb:35: unterminated regexp meets end of file
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.8ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:16:30 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  [1m[36mContent Load (0.6ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 300011]]
+  [1m[35m (0.3ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "9625dc12-87cb-351e-9672-a0e77ffc871c"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "3057730f-d135-3448-8062-5e50b0fa1186";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "de58d5fa-5373-3a27-85bf-aae6dc9f3280";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f1e870c6-72d6-3a7b-905c-a41d7cb62d1f";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "fcd3036e-a126-3a96-a79e-749b483ecbeb"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7dcf4b38-1889-3bd3-8c2c-fd7e0a305be0";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "46286fb5-9098-36b7-90c9-a00751e80dc9";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "dbdbd8c4-a5ea-3f6d-964f-939b8a8d8f85";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "a834dba1-9425-3151-800c-b2b84342d3d1"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9e6907e8-afb4-3388-a103-3fd109fe0430";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "479d3e33-4a59-3122-8bcd-d9b04adbe690";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1254faa-d1af-3446-b4cd-5b7e98989617";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "fb3aba9b-268b-354f-a358-d8d850ac7e16"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1ced51ad-4bcd-3528-90d6-a62fc716ceea";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f2219197-6f01-3285-839d-369fded2920c";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9a89fa43-1e16-39b4-9d24-4e12b9858a7e";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "10747301-6a35-3eee-9817-3bfbca6daf26"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "502924c1-34d4-3fd7-ba35-016a5c30b7b4"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "17e1d9ec-2a67-3881-835e-d9495e6a9856"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "b34994fe-873c-3ee7-9fda-8814dc41c682"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fca79358-3fa9-3c62-8fad-69aff7530039"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d461a02b-2519-3f7c-af0d-d936b3fcabde"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "76f3a1cb-262e-369d-89c3-0d6b2765fae8"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "f994c517-3a36-3357-9111-99f4e52a0785"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d581340c-7e15-3fae-be10-5e07f9581826"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "b240bd8d-1371-3540-b2e6-404ffd9aa2a4"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "effaf33d-7197-3235-9b98-3fff2ce2e17a"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "ded4b1c7-6029-35ac-b336-d110cdbffa48"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "83834c4a-b247-3471-b9e4-ac6debd03947"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d06e6518-9cd4-3b14-ba50-15db6b406931"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d217490d-1adb-3bac-b311-132896515489";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aff4a940-5940-32a7-a0f4-6f76492f2fb8";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "82bce6c5-1ee0-3e36-b71b-c92bd9606fc0";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1e1a4af-8ba9-3b39-9194-e3309835a799";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "35c8733f-2d4a-3696-835f-7fd111fb6d41";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fe7f152e-e7da-374f-8550-7873275aadb3";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "8e560567-fe26-3a16-8ee2-b723f05c7bf0";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "895736df-f3a3-3350-89e1-edb839fce468";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "780866e4-8ad7-3634-adbc-f3cb140b6648";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "86a08197-365a-368f-ac2b-c5b644fdf236";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "4a5ee309-d1b8-3f3f-be33-2468d58a5a92";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7f8704dc-1a93-3606-bcca-decd7ef16930";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 46ms (Views: 34.0ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:16:30 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412634" for 127.0.0.1 at 2016-12-09 00:16:30 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412634"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412634]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412419" for 127.0.0.1 at 2016-12-09 00:16:30 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412419"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412419]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412257" for 127.0.0.1 at 2016-12-09 00:16:30 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412257"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412257]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/400654" for 127.0.0.1 at 2016-12-09 00:16:30 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400654"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400654]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:16:49 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.6ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.3ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "9625dc12-87cb-351e-9672-a0e77ffc871c"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "3057730f-d135-3448-8062-5e50b0fa1186";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "de58d5fa-5373-3a27-85bf-aae6dc9f3280";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f1e870c6-72d6-3a7b-905c-a41d7cb62d1f";[0m
+  [1m[35m (0.3ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fcd3036e-a126-3a96-a79e-749b483ecbeb"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7dcf4b38-1889-3bd3-8c2c-fd7e0a305be0";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "46286fb5-9098-36b7-90c9-a00751e80dc9";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "dbdbd8c4-a5ea-3f6d-964f-939b8a8d8f85";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "a834dba1-9425-3151-800c-b2b84342d3d1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9e6907e8-afb4-3388-a103-3fd109fe0430";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "479d3e33-4a59-3122-8bcd-d9b04adbe690";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1254faa-d1af-3446-b4cd-5b7e98989617";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fb3aba9b-268b-354f-a358-d8d850ac7e16"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1ced51ad-4bcd-3528-90d6-a62fc716ceea";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f2219197-6f01-3285-839d-369fded2920c";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9a89fa43-1e16-39b4-9d24-4e12b9858a7e";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "10747301-6a35-3eee-9817-3bfbca6daf26"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "502924c1-34d4-3fd7-ba35-016a5c30b7b4"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "17e1d9ec-2a67-3881-835e-d9495e6a9856"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "b34994fe-873c-3ee7-9fda-8814dc41c682"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "fca79358-3fa9-3c62-8fad-69aff7530039"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "d461a02b-2519-3f7c-af0d-d936b3fcabde"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "76f3a1cb-262e-369d-89c3-0d6b2765fae8"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "f994c517-3a36-3357-9111-99f4e52a0785"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "d581340c-7e15-3fae-be10-5e07f9581826"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "b240bd8d-1371-3540-b2e6-404ffd9aa2a4"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "effaf33d-7197-3235-9b98-3fff2ce2e17a"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "ded4b1c7-6029-35ac-b336-d110cdbffa48"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "83834c4a-b247-3471-b9e4-ac6debd03947"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "d06e6518-9cd4-3b14-ba50-15db6b406931"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d217490d-1adb-3bac-b311-132896515489";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aff4a940-5940-32a7-a0f4-6f76492f2fb8";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "82bce6c5-1ee0-3e36-b71b-c92bd9606fc0";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1e1a4af-8ba9-3b39-9194-e3309835a799";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "35c8733f-2d4a-3696-835f-7fd111fb6d41";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fe7f152e-e7da-374f-8550-7873275aadb3";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "8e560567-fe26-3a16-8ee2-b723f05c7bf0";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "895736df-f3a3-3350-89e1-edb839fce468";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "780866e4-8ad7-3634-adbc-f3cb140b6648";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "86a08197-365a-368f-ac2b-c5b644fdf236";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "4a5ee309-d1b8-3f3f-be33-2468d58a5a92";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7f8704dc-1a93-3606-bcca-decd7ef16930";
+  Rendered legislator_page/view.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 55ms (Views: 41.2ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:16:49 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412634" for 127.0.0.1 at 2016-12-09 00:16:50 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412634"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412634]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412419" for 127.0.0.1 at 2016-12-09 00:16:50 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412419"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412419]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412257" for 127.0.0.1 at 2016-12-09 00:16:50 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412257"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412257]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/400654" for 127.0.0.1 at 2016-12-09 00:16:50 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400654"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 400654]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:16:54 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  [1m[36mContent Load (0.7ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 300011]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "9625dc12-87cb-351e-9672-a0e77ffc871c"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "3057730f-d135-3448-8062-5e50b0fa1186";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "de58d5fa-5373-3a27-85bf-aae6dc9f3280";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f1e870c6-72d6-3a7b-905c-a41d7cb62d1f";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "fcd3036e-a126-3a96-a79e-749b483ecbeb"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7dcf4b38-1889-3bd3-8c2c-fd7e0a305be0";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "46286fb5-9098-36b7-90c9-a00751e80dc9";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "dbdbd8c4-a5ea-3f6d-964f-939b8a8d8f85";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "a834dba1-9425-3151-800c-b2b84342d3d1"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9e6907e8-afb4-3388-a103-3fd109fe0430";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "479d3e33-4a59-3122-8bcd-d9b04adbe690";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1254faa-d1af-3446-b4cd-5b7e98989617";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";[0m
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "fb3aba9b-268b-354f-a358-d8d850ac7e16"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1ced51ad-4bcd-3528-90d6-a62fc716ceea";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f2219197-6f01-3285-839d-369fded2920c";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9a89fa43-1e16-39b4-9d24-4e12b9858a7e";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "10747301-6a35-3eee-9817-3bfbca6daf26"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "502924c1-34d4-3fd7-ba35-016a5c30b7b4"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "17e1d9ec-2a67-3881-835e-d9495e6a9856"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "b34994fe-873c-3ee7-9fda-8814dc41c682"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fca79358-3fa9-3c62-8fad-69aff7530039"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d461a02b-2519-3f7c-af0d-d936b3fcabde"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "76f3a1cb-262e-369d-89c3-0d6b2765fae8"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "f994c517-3a36-3357-9111-99f4e52a0785"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d581340c-7e15-3fae-be10-5e07f9581826"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "b240bd8d-1371-3540-b2e6-404ffd9aa2a4"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "effaf33d-7197-3235-9b98-3fff2ce2e17a"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "ded4b1c7-6029-35ac-b336-d110cdbffa48"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "83834c4a-b247-3471-b9e4-ac6debd03947"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "d06e6518-9cd4-3b14-ba50-15db6b406931"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d217490d-1adb-3bac-b311-132896515489";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aff4a940-5940-32a7-a0f4-6f76492f2fb8";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "82bce6c5-1ee0-3e36-b71b-c92bd9606fc0";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1e1a4af-8ba9-3b39-9194-e3309835a799";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "35c8733f-2d4a-3696-835f-7fd111fb6d41";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fe7f152e-e7da-374f-8550-7873275aadb3";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "8e560567-fe26-3a16-8ee2-b723f05c7bf0";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "895736df-f3a3-3350-89e1-edb839fce468";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "780866e4-8ad7-3634-adbc-f3cb140b6648";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "86a08197-365a-368f-ac2b-c5b644fdf236";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "4a5ee309-d1b8-3f3f-be33-2468d58a5a92";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7f8704dc-1a93-3606-bcca-decd7ef16930";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 65ms (Views: 47.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:16:54 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412634" for 127.0.0.1 at 2016-12-09 00:16:54 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412634"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412634]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412419" for 127.0.0.1 at 2016-12-09 00:16:54 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412419"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412419]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412257" for 127.0.0.1 at 2016-12-09 00:16:54 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412257"}
+  [1m[36mLegislator Load (0.7ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412257]]
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/l_img/400654" for 127.0.0.1 at 2016-12-09 00:16:54 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400654"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400654]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-09 00:17:03 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.9ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (0.3ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9625dc12-87cb-351e-9672-a0e77ffc871c";[0m
+  [1m[35mContent Load (0.3ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "9625dc12-87cb-351e-9672-a0e77ffc871c"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "3057730f-d135-3448-8062-5e50b0fa1186";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "de58d5fa-5373-3a27-85bf-aae6dc9f3280";
+  [1m[36m (0.3ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f1e870c6-72d6-3a7b-905c-a41d7cb62d1f";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "f48709f3-47c8-3c00-b3f3-ddf278b3cbc6"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fcd3036e-a126-3a96-a79e-749b483ecbeb";
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fcd3036e-a126-3a96-a79e-749b483ecbeb"]]
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7dcf4b38-1889-3bd3-8c2c-fd7e0a305be0";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "46286fb5-9098-36b7-90c9-a00751e80dc9";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "dbdbd8c4-a5ea-3f6d-964f-939b8a8d8f85";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "a834dba1-9425-3151-800c-b2b84342d3d1";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "a834dba1-9425-3151-800c-b2b84342d3d1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9e6907e8-afb4-3388-a103-3fd109fe0430";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "479d3e33-4a59-3122-8bcd-d9b04adbe690";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1254faa-d1af-3446-b4cd-5b7e98989617";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fb3aba9b-268b-354f-a358-d8d850ac7e16";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "fb3aba9b-268b-354f-a358-d8d850ac7e16"]]
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "1ced51ad-4bcd-3528-90d6-a62fc716ceea";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f2219197-6f01-3285-839d-369fded2920c";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "9a89fa43-1e16-39b4-9d24-4e12b9858a7e";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "10747301-6a35-3eee-9817-3bfbca6daf26";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "10747301-6a35-3eee-9817-3bfbca6daf26"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "502924c1-34d4-3fd7-ba35-016a5c30b7b4";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "502924c1-34d4-3fd7-ba35-016a5c30b7b4"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "17e1d9ec-2a67-3881-835e-d9495e6a9856";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "17e1d9ec-2a67-3881-835e-d9495e6a9856"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b34994fe-873c-3ee7-9fda-8814dc41c682";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "b34994fe-873c-3ee7-9fda-8814dc41c682"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fca79358-3fa9-3c62-8fad-69aff7530039";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "fca79358-3fa9-3c62-8fad-69aff7530039"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d461a02b-2519-3f7c-af0d-d936b3fcabde";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "d461a02b-2519-3f7c-af0d-d936b3fcabde"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "76f3a1cb-262e-369d-89c3-0d6b2765fae8";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "76f3a1cb-262e-369d-89c3-0d6b2765fae8"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f994c517-3a36-3357-9111-99f4e52a0785";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "f994c517-3a36-3357-9111-99f4e52a0785"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d581340c-7e15-3fae-be10-5e07f9581826";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "d581340c-7e15-3fae-be10-5e07f9581826"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b240bd8d-1371-3540-b2e6-404ffd9aa2a4";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "b240bd8d-1371-3540-b2e6-404ffd9aa2a4"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "effaf33d-7197-3235-9b98-3fff2ce2e17a";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "effaf33d-7197-3235-9b98-3fff2ce2e17a"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "aaa009ee-cbc0-3ef3-a8b3-b56b891cddce"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ded4b1c7-6029-35ac-b336-d110cdbffa48";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "ded4b1c7-6029-35ac-b336-d110cdbffa48"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "83834c4a-b247-3471-b9e4-ac6debd03947";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "83834c4a-b247-3471-b9e4-ac6debd03947"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d06e6518-9cd4-3b14-ba50-15db6b406931";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "d06e6518-9cd4-3b14-ba50-15db6b406931"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "d217490d-1adb-3bac-b311-132896515489";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "aff4a940-5940-32a7-a0f4-6f76492f2fb8";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "82bce6c5-1ee0-3e36-b71b-c92bd9606fc0";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "b1e1a4af-8ba9-3b39-9194-e3309835a799";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "35c8733f-2d4a-3696-835f-7fd111fb6d41";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "fe7f152e-e7da-374f-8550-7873275aadb3";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "8e560567-fe26-3a16-8ee2-b723f05c7bf0";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "895736df-f3a3-3350-89e1-edb839fce468";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "780866e4-8ad7-3634-adbc-f3cb140b6648";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "86a08197-365a-368f-ac2b-c5b644fdf236";
+  [1m[36m (0.1ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "4a5ee309-d1b8-3f3f-be33-2468d58a5a92";[0m
+  [1m[35m (0.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7f8704dc-1a93-3606-bcca-decd7ef16930";
+  Rendered legislator_page/view.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 64ms (Views: 48.4ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-09 00:17:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412634" for 127.0.0.1 at 2016-12-09 00:17:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412634"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412634]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/412419" for 127.0.0.1 at 2016-12-09 00:17:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412419"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412419]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/412257" for 127.0.0.1 at 2016-12-09 00:17:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412257"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412257]]
+  Rendered text template (0.0ms)
+Sent data  (0.2ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/l_img/400654" for 127.0.0.1 at 2016-12-09 00:17:04 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400654"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 400654]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)

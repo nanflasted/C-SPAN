@@ -3,6 +3,7 @@ require_relative "us_state"
 class LegislatorPageController < ApplicationController
   helper_method :get_img_link
   helper_method :get_likes_subtext
+  helper_method :get_replies
 
   def view
     @legislator = Legislator.find(params[:id])
@@ -38,7 +39,11 @@ class LegislatorPageController < ApplicationController
     else 
        return "#{likes[0][0]}, #{likes[1][0]}, and #{likes.count - 2} others like this post"
     end
-    
   end
+
+  def get_replies(c2)
+   return Content.where(type: "reply", replyto: c2.id)
+  end
+
     
 end
