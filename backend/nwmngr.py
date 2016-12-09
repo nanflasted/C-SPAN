@@ -5,6 +5,7 @@ import sys
 import subprocess
 import re
 import time
+import dbmngr
 
 def removeLinks(text):
     text = re.sub(r'((mailto:|(news|(ht|f)tp(s?))://){1}\S+)',"",text)
@@ -45,13 +46,13 @@ def getAllTweets(screen_name,filename):
 def genTweetBlobs(twaccnts):
     try:
         dbc = dbmngr.connectDB("./data/","cspdb",False)
-        idcur = dbmngr.queryEntry(dbc,["id","ideology"],["legislator"])
+        idcur = dbmngr.queryEntry(dbc,["id","ideology"],["legislators"])
         if idcur is None:
             raise Exception("Query Error at updateLegisImg")
         idlist = idcur.fetchall()
         print "query for id, ideology done"
         for i in range(5):
-            acclist = [twaccnts[k[0]] for k in idlist if k[1] == i]
+            acclist = [twaccnts[k[0]] for k in idlist if int(k[1]) == i]
             datadir = './data/twblobs/'+str(i) + '/'
             getAllTweets(acclist,datadir+'input.txt')
             print "input file generation for ideology "+str(i)+" success"
@@ -59,9 +60,9 @@ def genTweetBlobs(twaccnts):
                 "./rnn/train.py",
                 "--data_dir="+datadir,
                 "--save_dir="+datadir+'model/',
-                "--rnn_size=" + str(128),
-                "--num_epochs=" + str(7),
-                "--seq_length=" + str(10),
+                "--rnn_size=" + str(256),
+                "--num_epochs=" + str(50),
+                "--seq_length=" + str(30),
                 "--learning_rate="+str(0.003),
                 "--model=lstm"
                 ])
@@ -80,9 +81,9 @@ def genBillBlobs():
                 "./rnn/train.py",
                 "--data_dir="+datadir,
                 "--save_dir="+datadir+'model/',
-                "--rnn_size=" + str(128),
-                "--num_epochs=" + str(7),
-                "--seq_length=" + str(10),
+                "--rnn_size=" + str(256),
+                "--num_epochs=" + str(50),
+                "--seq_length=" + str(30),
                 "--learning_rate="+str(0.003),
                 "--model=lstm"
                 ])

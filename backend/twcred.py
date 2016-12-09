@@ -1,6 +1,6 @@
 def auth():
-	consumer_key = YOUR_CONSUMER_KEY_HERE
-	consumer_secret = YOUR_CONSUMER_SECRET_HERE
-	access_token = YOUR_ACCESS_KEY_HERE
-	access_secret = YOUR_ACCESS_SECRET_HERE
+	consumer_key = "mCcyKjC8Aj8Sh4AWprIjg9Mua"
+	consumer_secret = "DMLkjkEAExRLvzEgGF2M5BSkjhQW0DwYxJDhJgP7TjFDfwJndq"
+	access_token = "446227835-abbsj35HuuOy2SoyTDcuO6mmJSSp2fkmsHH4EZvT"
+	access_secret = "uOxM2uaCw0o731hRNvbwgXhTXJMjuqfYlikhsun0xeWD4"
 	return consumer_key,consumer_secret,access_token,access_secret

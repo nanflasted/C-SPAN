@@ -22,21 +22,22 @@ def hardreset():
     try:
         subprocess.call(['rm','-rf','./data/'])
         subprocess.call(['rm','-rf','./log/'])
+        os.mkdir('./log/')
+	loginit.main()
         os.mkdir('./data')
         subprocess.call(['cp','./prestored/noimg.jpeg','./data/'])
         os.mkdir('./data/bills')
         subprocess.call(['cp','./prestored/bills.txt','./data/bills/input.txt'])
         os.mkdir('./data/bills/model')
-        os.mkdir('./twblobs')
+        os.mkdir('./data/twblobs')
         for i in range(5):
-            os.mkdir('./twblobs/{0}'.format(i))
-            os.mkdir('./twblobs/{0}/model/'.format(i))
-        os.mkdir('./log/')
-        dbinit.main()
-        loginit.main()
+            os.mkdir('./data/twblobs/{0}'.format(i))
+            os.mkdir('./data/twblobs/{0}/model/'.format(i))
+       	dbinit.main()
         return True
     except Exception:
-        return False
+	print sys.exc_info()[1]
+	print sys.exc_info()[2]
     return False
 
 def softreset():
@@ -63,7 +64,7 @@ def generateNN():
         bool: whether the operation was successful
     '''
     try:
-        twac = dbpopl.getBasicInfo(False)
+        twac = dbpopl.getBasicInfo()
         nwmngr.genTweetBlobs(twac)
         nwmngr.genBillBlobs()
         csplog.logevent("neuralnet","Neural Networks generated")
@@ -222,11 +223,12 @@ def server():
     pass
 
 def main():
-    hardreset()
-    populate()
+    print hardreset()
+    print generateNN()
+    print populate(0,0,0,0)
     return
 
-if __name__ == "main":  main()
+if __name__ == "__main__":  main()
 
 
  
