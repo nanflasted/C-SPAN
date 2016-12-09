@@ -4,6 +4,7 @@ class LegislatorPageController < ApplicationController
   helper_method :get_img_link
   helper_method :get_likes_subtext
   helper_method :get_replies
+  helper_method :rlink
 
   def view
     @legislator = Legislator.find(params[:id])
@@ -23,6 +24,10 @@ class LegislatorPageController < ApplicationController
 
   def get_img_link(id)
     return "http://localhost:3000/l_img/#{id}"
+  end
+
+  def rlink(pid)
+    return "/legislator_page/#{pid}"
   end
 
   def get_likes_subtext(c2)

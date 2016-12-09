@@ -4,6 +4,7 @@ class LegislatorPageController < ApplicationController
   helper_method :get_img_link
   helper_method :get_likes_subtext
   helper_method :get_replies
+  helper_method :rlink
 
   def view
     @legislator = Legislator.find(params[:id])
@@ -25,6 +26,10 @@ class LegislatorPageController < ApplicationController
     return "http://localhost:3000/l_img/#{id}"
   end
 
+  def rlink(pid)
+    return "/legislator_page/#{pid}"
+  end
+
   def get_likes_subtext(c2)
    out = "SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = \"#{c2.id}\";" 
    likes = ActiveRecord::Base.connection_pool.with_connection { |con| con.exec_query(out ) }.rows
@@ -41,7 +46,9 @@ class LegislatorPageController < ApplicationController
     end
   end
 
-  def get_replies(
+  def get_replies(c2)
+   return Content.where(type: "reply", replyto: c2.id)
+  end
 
     
 end
