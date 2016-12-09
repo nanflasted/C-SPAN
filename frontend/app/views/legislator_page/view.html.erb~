@@ -30,8 +30,21 @@
             <font size = 2> <font color=#770000> <%= get_likes_subtext(r) %> <font color=#000000></p>
         <% end %>
 
-    <% end %>
+    <% elsif c.type == "bill" %>
+        <hr>
+        <img src= <%= @profile_pic  %> alt= <%= @name %> style="width:50px;height:50px;float:left">
+        <p style="margin-left: 65px; "> <font size = 4> <font color=#000077> BILL: <%= c.contents %><font color=#000000>
+        <br><font color=#007700> YEA: <%= "\n" + get_yea(c) + "    " %> <font color=#000000>
+        <font color=#770000> NAY: <%= "\n" + get_nay(c) %> <font color=#000000>
+        <% if get_yea(c) > get_nay(c)
+            <br><font color=#007700>BILL PASSES<font color=#000000>
+        <% else %>
+            <br><font color=#770000>BILL REJECTED<font color=#000000>
+        <% end %>
+        
+        </p>
 
+    <% end %>
 
 </table> 
 <% end %>

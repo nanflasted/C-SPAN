@@ -5,6 +5,9 @@ class LegislatorPageController < ApplicationController
   helper_method :get_likes_subtext
   helper_method :get_replies
   helper_method :rlink
+  helper_method :get_bill_committee
+  helper_method :get_yea
+  helper_method :get_nay
 
   def view
     @legislator = Legislator.find(params[:id])
@@ -15,7 +18,7 @@ class LegislatorPageController < ApplicationController
     @description = "#{party} #{@legislator.role.capitalize} from #{US_State.abbreviation_to_full(@legislator.state)}"
     # CODING HORROR here but that's ok
     @profile_pic = get_img_link(params[:id])
-    @contents = Content.where(author: @legislator.id)
+    @contents = Content.where(author: @legislator.id).reverse
     puts "COUNT #{@contents.length}"
     @contents.each do |c|
       puts "#{c.type}"
@@ -23,6 +26,8 @@ class LegislatorPageController < ApplicationController
   end
 
   def get_img_link(id)
+
+
     return "http://localhost:3000/l_img/#{id}"
   end
 
@@ -50,5 +55,23 @@ class LegislatorPageController < ApplicationController
    return Content.where(type: "reply", replyto: c2.id)
   end
 
-    
+  def get_bill_committee(bill)
+    out = "SELECT C.NAME FROM COMMITTEES C WHERE C.id = \"#{bill.committees}\";" 
+    res = ActiveRecord::Base.connection_pool.with_connection { |con| con.exec_query(out ) }.rows
+    puts "RES: #{res}"
+    return res[0][0]
+  end
+
+  def get_yea(bill)
+    out = "SELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = \"#{bill.id}\" AND V.VOTES = \"yea\"";
+    res = ActiveRecord::Base.connection_pool.with_connection { |con| con.exec_query(out ) }.rows
+    return res[0][0].to_s
+  end
+
+  def get_nay(bill)
+    out = "SELECT COUNT(V.LID) FROM VOTES V WHERE V.cid = \"#{bill.id}\" AND V.VOTES = \"nay\"";
+    res = ActiveRecord::Base.connection_pool.with_connection { |con| con.exec_query(out ) }.rows
+    return res[0][0].to_s
+  end
+   
 end
