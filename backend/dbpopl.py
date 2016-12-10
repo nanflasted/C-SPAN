@@ -414,7 +414,7 @@ def genLikes(contentid, idlist, authorideo=None, ideolist=None):
             i,
             contentid
             ] for i in likes]
-        if not dbmngr.insertMany(dbc,"votes",collist,likelist):
+        if not dbmngr.insertMany(dbc,"likes",collist,likelist):
             raise Exception("Database Insertion Error at genVotes")
         dbc.close()
         return likes

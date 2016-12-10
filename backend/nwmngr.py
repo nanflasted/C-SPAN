@@ -60,9 +60,9 @@ def genTweetBlobs(twaccnts):
                 "./rnn/train.py",
                 "--data_dir="+datadir,
                 "--save_dir="+datadir+'model/',
-                "--rnn_size=" + str(256),
-                "--num_epochs=" + str(50),
-                "--seq_length=" + str(30),
+                "--rnn_size=" + str(32),
+                "--num_epochs=" + str(1),
+                "--seq_length=" + str(10),
                 "--learning_rate="+str(0.003),
                 "--model=lstm"
                 ])
@@ -81,9 +81,9 @@ def genBillBlobs():
                 "./rnn/train.py",
                 "--data_dir="+datadir,
                 "--save_dir="+datadir+'model/',
-                "--rnn_size=" + str(256),
-                "--num_epochs=" + str(50),
-                "--seq_length=" + str(30),
+                "--rnn_size=" + str(64),
+                "--num_epochs=" + str(3),
+                "--seq_length=" + str(10),
                 "--learning_rate="+str(0.003),
                 "--model=lstm"
                 ])
