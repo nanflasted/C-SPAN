@@ -8,6 +8,8 @@ class LegislatorPageController < ApplicationController
   helper_method :get_bill_committee
   helper_method :get_yea
   helper_method :get_nay
+  helper_method :top_meme_text
+  helper_method :bottom_meme_text
 
   def view
     
@@ -80,4 +82,12 @@ class LegislatorPageController < ApplicationController
     return res[0][0].to_s
   end
    
+  def top_meme_text(c)
+       c.contents.split("<MEME>")[0]
+  end
+
+  def bottom_meme_text(c)
+       c.contents.split("<MEME>")[1]
+  end
+
 end
