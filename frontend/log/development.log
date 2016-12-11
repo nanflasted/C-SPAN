@@ -27136,3 +27136,471 @@ Processing by LImgController#view as */*
   Rendered text template (0.0ms)
 Sent data  (0.3ms)
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/300011" for 127.0.0.1 at 2016-12-11 00:58:31 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300011"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 300011]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 300011]]
+  [1m[36m (2.8ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "2e20dd62-51d4-3ffe-9fe8-578468fb5a25";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "2e20dd62-51d4-3ffe-9fe8-578468fb5a25"]]
+  [1m[36m (6.4ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "3629b993-c237-3a34-9de7-f88234fe07e3";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "3629b993-c237-3a34-9de7-f88234fe07e3"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "0c66da78-5114-361b-9ee8-1dbd4ef3c189";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "0c66da78-5114-361b-9ee8-1dbd4ef3c189"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f2a2ac1e-fbbf-3b74-a360-e88e06d7070b";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "f2a2ac1e-fbbf-3b74-a360-e88e06d7070b"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "06a71e9f-df2d-3b86-9a11-b1c21d493d0d";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "f900d387-7444-3ea8-be09-5ee949b6b5b6";
+  [1m[36m (0.2ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "29c33116-dce3-3aee-8c22-05e071152468";[0m
+  [1m[35m (0.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "c0e58de1-c105-3c2f-a527-a0e0e98334a4";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "c0e58de1-c105-3c2f-a527-a0e0e98334a4"]]
+  Rendered legislator_page/view.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 245ms (Views: 189.3ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/l_img/300011" for 127.0.0.1 at 2016-12-11 00:58:31 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300011"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300011]]
+  Rendered text template (0.0ms)
+Sent data  (3.7ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/400271" for 127.0.0.1 at 2016-12-11 00:58:31 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400271"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 400271]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412600" for 127.0.0.1 at 2016-12-11 01:17:01 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412600"}
+  [1m[36mLegislator Load (0.4ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412600]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412600]]
+  [1m[36m (9.3ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "537b07be-5af4-382e-a8b0-877212ab979b";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "537b07be-5af4-382e-a8b0-877212ab979b"]]
+  Rendered legislator_page/view.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 246ms (Views: 191.2ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/l_img/412600" for 127.0.0.1 at 2016-12-11 01:17:02 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412600"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412600]]
+  Rendered text template (0.0ms)
+Sent data  (3.1ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/400363" for 127.0.0.1 at 2016-12-11 01:17:15 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.4ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 400363]]
+  Rendered legislator_page/view.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (no implicit conversion of nil into String):
+    43:         <div style="position: relative; width: 100%;">
+    44:             <font color=#fffff>
+    45:             <% # TODO dump in CSS class %>
+    46:             <img src= <%= "/meme_img/" + c.memebg + ".jpg" %> style="width:400px;height:400px;margin-left: 10px; ">
+    47:             <p style="position: absolute; top: 0px; left: 70px; width: 100%; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; width: 385px; word-wrap: break-word;  text-align: center;"> 
+    48: 
+    49:             <b>
+  app/views/legislator_page/view.html.erb:46:in `+'
+  app/views/legislator_page/view.html.erb:46:in `block in _app_views_legislator_page_view_html_erb__3048210145441061305_47423414501760'
+  app/views/legislator_page/view.html.erb:14:in `each'
+  app/views/legislator_page/view.html.erb:14:in `_app_views_legislator_page_view_html_erb__3048210145441061305_47423414501760'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.4ms)
+
+
+Started GET "/legislator_page/400363" for 127.0.0.1 at 2016-12-11 01:17:26 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 400363]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (no implicit conversion of nil into String):
+    43:         <div style="position: relative; width: 100%;">
+    44:             <font color=#fffff>
+    45:             <% # TODO dump in CSS class %>
+    46:             <img src= <%= "/meme_img/" + c.memebg + ".jpg" %> style="width:400px;height:400px;margin-left: 10px; ">
+    47:             <p style="position: absolute; top: 0px; left: 70px; width: 100%; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; width: 385px; word-wrap: break-word;  text-align: center;"> 
+    48: 
+    49:             <b>
+  app/views/legislator_page/view.html.erb:46:in `+'
+  app/views/legislator_page/view.html.erb:46:in `block in _app_views_legislator_page_view_html_erb__3048210145441061305_47423414501760'
+  app/views/legislator_page/view.html.erb:14:in `each'
+  app/views/legislator_page/view.html.erb:14:in `_app_views_legislator_page_view_html_erb__3048210145441061305_47423414501760'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.5ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.0ms)
+
+
+Started GET "/legislator_page/400363" for 127.0.0.1 at 2016-12-11 01:18:55 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.5ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 400363]]
+  Rendered legislator_page/view.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (no implicit conversion of nil into String):
+    43:         <div style="position: relative; width: 100%;">
+    44:             <font color=#fffff>
+    45:             <% # TODO dump in CSS class %>
+    46:             <img src= <%= "/meme_img/" + c.memebg + ".jpg" %> style="width:400px;height:400px;margin-left: 10px; ">
+    47:             <p style="position: absolute; top: 0px; left: 70px; width: 100%; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; width: 385px; word-wrap: break-word;  text-align: center;"> 
+    48: 
+    49:             <b>
+  app/views/legislator_page/view.html.erb:46:in `+'
+  app/views/legislator_page/view.html.erb:46:in `block in _app_views_legislator_page_view_html_erb__3048210145441061305_47423435259960'
+  app/views/legislator_page/view.html.erb:14:in `each'
+  app/views/legislator_page/view.html.erb:14:in `_app_views_legislator_page_view_html_erb__3048210145441061305_47423435259960'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.5ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.8ms)
+
+
+Started GET "/legislator_page/400363" for 127.0.0.1 at 2016-12-11 01:18:59 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 400363]]
+  Rendered legislator_page/view.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (no implicit conversion of nil into String):
+    43:         <div style="position: relative; width: 100%;">
+    44:             <font color=#fffff>
+    45:             <% # TODO dump in CSS class %>
+    46:             <img src= <%= "/meme_img/" + c.memebg + ".jpg" %> style="width:400px;height:400px;margin-left: 10px; ">
+    47:             <p style="position: absolute; top: 0px; left: 70px; width: 100%; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; width: 385px; word-wrap: break-word;  text-align: center;"> 
+    48: 
+    49:             <b>
+  app/views/legislator_page/view.html.erb:46:in `+'
+  app/views/legislator_page/view.html.erb:46:in `block in _app_views_legislator_page_view_html_erb__3048210145441061305_47423435259960'
+  app/views/legislator_page/view.html.erb:14:in `each'
+  app/views/legislator_page/view.html.erb:14:in `_app_views_legislator_page_view_html_erb__3048210145441061305_47423435259960'
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.7ms)
+
+
+Started GET "/legislator_page/400363" for 127.0.0.1 at 2016-12-11 01:19:33 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 400363]]
+  Rendered legislator_page/view.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:40: syntax error, unexpected '<'
+        <hr>
+         ^
+/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:41: syntax error, unexpected '<'
+        <img src= <%= @profile_pic  ;@output_buf...
+                   ^
+/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:67: syntax error, unexpected keyword_do_block, expecting keyword_end
+         get_replies(c).each do |r| 
+                               ^
+/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:80: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/legislator_page/view.html.erb:40: syntax error, unexpected '<'
+  app/views/legislator_page/view.html.erb:41: syntax error, unexpected '<'
+  app/views/legislator_page/view.html.erb:67: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/legislator_page/view.html.erb:80: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.7ms)
+
+
+Started GET "/legislator_page/400363" for 127.0.0.1 at 2016-12-11 01:19:41 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 400363]]
+  Rendered legislator_page/view.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:40: syntax error, unexpected '<'
+        <hr>
+         ^
+/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:41: syntax error, unexpected '<'
+        <img src= <%= @profile_pic  ;@output_buf...
+                   ^
+/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:67: syntax error, unexpected keyword_do_block, expecting keyword_end
+         get_replies(c).each do |r| 
+                               ^
+/home/jack/cspan/frontend/app/views/legislator_page/view.html.erb:80: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/legislator_page/view.html.erb:40: syntax error, unexpected '<'
+  app/views/legislator_page/view.html.erb:41: syntax error, unexpected '<'
+  app/views/legislator_page/view.html.erb:67: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/legislator_page/view.html.erb:80: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jack/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.7ms)
+
+
+Started GET "/legislator_page/400363" for 127.0.0.1 at 2016-12-11 01:19:49 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 400363]]
+  [1m[35m (10.5ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "e74a0838-48e1-3050-a942-23df4baf3172";
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "e74a0838-48e1-3050-a942-23df4baf3172"]]
+  Rendered legislator_page/view.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 30ms (Views: 16.8ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/l_img/400363" for 127.0.0.1 at 2016-12-11 01:19:49 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/400363" for 127.0.0.1 at 2016-12-11 01:19:56 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"400363"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 400363]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 400363]]
+  [1m[36m (5.5ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "e74a0838-48e1-3050-a942-23df4baf3172";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "e74a0838-48e1-3050-a942-23df4baf3172"]]
+  Rendered legislator_page/view.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 32ms (Views: 23.3ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/l_img/400363" for 127.0.0.1 at 2016-12-11 01:19:56 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400363"}
+  [1m[36mLegislator Load (0.1ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 400363]]
+  Rendered text template (0.0ms)
+Sent data  (0.3ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/400363" for 127.0.0.1 at 2016-12-11 01:20:24 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 400363]]
+  Rendered legislator_page/view.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/l_img/400363" for 127.0.0.1 at 2016-12-11 01:20:24 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"400363"}
+  [1m[35mLegislator Load (0.1ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 400363]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/legislator_page/412523" for 127.0.0.1 at 2016-12-11 01:20:46 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412523"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412523]]
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412523]]
+  [1m[36m (5.7ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "7085a294-2c19-30be-9844-0caea9a181e1";[0m
+  [1m[35mContent Load (0.2ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "7085a294-2c19-30be-9844-0caea9a181e1"]]
+  [1m[36m (2.9ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "dfb45f4f-07a9-3984-ae12-0fc07c86ad9e";[0m
+  Rendered legislator_page/view.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 255ms (Views: 201.8ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/l_img/412523" for 127.0.0.1 at 2016-12-11 01:20:46 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412523"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412523]]
+  Rendered text template (0.0ms)
+Sent data  (4.7ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/l_img/412505" for 127.0.0.1 at 2016-12-11 01:20:46 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412505"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412505]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/legislator_page/412537" for 127.0.0.1 at 2016-12-11 01:21:07 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412537"}
+  [1m[35mLegislator Load (0.5ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412537]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412537]]
+  [1m[35m (6.8ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "cb71eb79-8d53-34eb-ad12-aad96002ce88";
+  [1m[36mContent Load (0.3ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "cb71eb79-8d53-34eb-ad12-aad96002ce88"]]
+  Rendered legislator_page/view.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/l_img/412537" for 127.0.0.1 at 2016-12-11 01:21:07 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412537"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412537]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/legislator_page/412537" for 127.0.0.1 at 2016-12-11 01:21:25 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412537"}
+  [1m[36mLegislator Load (8.8ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412537]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412537]]
+  [1m[36m (7.9ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "cb71eb79-8d53-34eb-ad12-aad96002ce88";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "cb71eb79-8d53-34eb-ad12-aad96002ce88"]]
+  Rendered legislator_page/view.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 57ms (Views: 37.9ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/l_img/412537" for 127.0.0.1 at 2016-12-11 01:21:25 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412537"}
+  [1m[36mLegislator Load (0.7ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412537]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/legislator_page/412537" for 127.0.0.1 at 2016-12-11 01:21:26 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412537"}
+  [1m[35mLegislator Load (0.2ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412537]]
+  [1m[36mContent Load (0.2ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 412537]]
+  [1m[35m (13.2ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "cb71eb79-8d53-34eb-ad12-aad96002ce88";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "cb71eb79-8d53-34eb-ad12-aad96002ce88"]]
+  Rendered legislator_page/view.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 81ms (Views: 62.9ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/l_img/412537" for 127.0.0.1 at 2016-12-11 01:21:26 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412537"}
+  [1m[35mLegislator Load (1.0ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 412537]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/legislator_page/412537" for 127.0.0.1 at 2016-12-11 01:21:27 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"412537"}
+  [1m[36mLegislator Load (0.2ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412537]]
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."author" = ?  [["author", 412537]]
+  [1m[36m (15.7ms)[0m  [1mSELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "cb71eb79-8d53-34eb-ad12-aad96002ce88";[0m
+  [1m[35mContent Load (0.1ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?  [["type", "reply"], ["replyto", "cb71eb79-8d53-34eb-ad12-aad96002ce88"]]
+  Rendered legislator_page/view.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 42ms (Views: 23.7ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/l_img/412537" for 127.0.0.1 at 2016-12-11 01:21:27 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"412537"}
+  [1m[36mLegislator Load (0.3ms)[0m  [1mSELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1[0m  [["id", 412537]]
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/legislator_page/300038" for 127.0.0.1 at 2016-12-11 01:21:40 -0500
+Processing by LegislatorPageController#view as HTML
+  Parameters: {"id"=>"300038"}
+  [1m[35mLegislator Load (0.7ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300038]]
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."author" = ?[0m  [["author", 300038]]
+  [1m[35m (10.1ms)[0m  SELECT G.name FROM LIKES L, LEGISLATORS G WHERE G.id = L.lid AND L.cid = "ce5323a7-e3c8-30bb-876a-ebf6e1e994f3";
+  [1m[36mContent Load (0.1ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."type" = ? AND "contents"."replyto" = ?[0m  [["type", "reply"], ["replyto", "ce5323a7-e3c8-30bb-876a-ebf6e1e994f3"]]
+  Rendered legislator_page/view.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 33ms (Views: 20.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/l_img/300038" for 127.0.0.1 at 2016-12-11 01:21:40 -0500
+Processing by LImgController#view as */*
+  Parameters: {"id"=>"300038"}
+  [1m[35mLegislator Load (0.3ms)[0m  SELECT  "legislators".* FROM "legislators" WHERE "legislators"."id" = ? LIMIT 1  [["id", 300038]]
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)

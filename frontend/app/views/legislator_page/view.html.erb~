@@ -36,10 +36,10 @@
         <% end %>
         
         </p>
-    <% else #it was a meme %>
+    <% elsif c.type == "meme" %>
         <hr>
         <img src= <%= @profile_pic  %> alt= <%= @name %> style="width:50px;height:50px;float:left">
-        
+        <% print c.type %>
         <div style="position: relative; width: 100%;">
             <font color=#fffff>
             <% # TODO dump in CSS class %>
@@ -59,7 +59,7 @@
      <p style="margin-left: 65px; "> 
     <% end %>
     
-    <font size = 2> <font color=#334433> <%=   helper.time_ago_in_words(post_time(c)) %> <font color=#000000><br>
+    <font size = 2> <font color=#334433> <%=  post_time(c) %> <font color=#000000><br>
     <font size = 3> <font color=#770000> <%= get_likes_subtext(c) %> <font color=#000000>
     </p>
   

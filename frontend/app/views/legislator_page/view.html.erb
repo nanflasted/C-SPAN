@@ -16,6 +16,7 @@
 <table width="100%" border="0" height="100%" align="CENTER">
 
 <font color="black">
+    <% next if c.type == "reply" %>
     <% if c.type == "post" %>
         <hr>
         <img src= <%= @profile_pic  %> alt= <%= @name %> style="width:50px;height:50px;float:left">
@@ -36,10 +37,10 @@
         <% end %>
         
         </p>
-    <% else #it was a meme %>
+    <% elsif c.type == "meme" %>
         <hr>
         <img src= <%= @profile_pic  %> alt= <%= @name %> style="width:50px;height:50px;float:left">
-        
+        <% print c.type %>
         <div style="position: relative; width: 100%;">
             <font color=#fffff>
             <% # TODO dump in CSS class %>
