@@ -59,7 +59,9 @@
      <p style="margin-left: 65px; "> 
     <% end %>
     
-    <font size = 3> <font color=#770000> <%= get_likes_subtext(c) %> <font color=#000000></p>
+    <font size = 2> <font color=#334433> <%=  post_time(c) %> <font color=#000000><br>
+    <font size = 3> <font color=#770000> <%= get_likes_subtext(c) %> <font color=#000000>
+    </p>
   
         <% # Fetch Replies %> 
         <% get_replies(c).each do |r| %>

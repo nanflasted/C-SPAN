@@ -1,4 +1,6 @@
 require_relative "us_state"
+require "time"
+include ActionView::Helpers::DateHelper
 
 class LegislatorPageController < ApplicationController
   helper_method :get_img_link
@@ -10,6 +12,7 @@ class LegislatorPageController < ApplicationController
   helper_method :get_nay
   helper_method :top_meme_text
   helper_method :bottom_meme_text
+  helper_method :post_time
 
   def view
     
@@ -88,6 +91,10 @@ class LegislatorPageController < ApplicationController
 
   def bottom_meme_text(c)
        c.contents.split("<MEME>")[1]
+  end
+
+  def post_time(c)
+     time_ago_in_words(Time.parse(c.time)) + " ago"
   end
 
 end
