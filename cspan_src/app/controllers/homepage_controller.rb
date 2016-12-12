@@ -6,7 +6,7 @@ class HomepageController < ApplicationController
     end
 
   def get_img_link(id)
-    return "http://localhost:3000/l_img/#{id}"
+    return "/l_img/#{id}"
   end
 
   def rlink(pid)
