@@ -11,10 +11,9 @@ commlist = commcur.fetchall()
 dbc.close()
 
 
-
-
 last_post = None
-memes = ["harambe","dos_equis","capitol","trump","obama"]
+memes = [["harambe","Harambe"],["dos_equis","I don't always"],["capitol", "Congress"],["trump","Trump"],["obama","Obama"]]
+
 while(True):
     try:
         lid = random.choice(idlist)[0]
@@ -30,7 +29,8 @@ while(True):
             newReply(1, lid, last_post,True)
         elif content_random < 90:
             print("generating meme")
-            last_post = newMeme(1, lid, random.choice(memes), True, True)[0]
+            meme_tuple = random.choice(memes)
+            last_post = newMeme(1, lid,meme_tuple[0], True, True, meme_tuple[1])[0]
         else:
             print("generating bill")
             last_post = newBill(1, lid, random.choice(commlist)[0], True)
@@ -38,4 +38,3 @@ while(True):
     except Exception as e:
         print("Error:", e)
 
-    time.sleep(70)
