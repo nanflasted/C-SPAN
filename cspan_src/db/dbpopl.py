@@ -408,7 +408,7 @@ def genLikes(contentid, idlist, authorideo=None, ideolist=None):
         else:
             problist = [0.05 for _ in idlist]
         
-        likes = [idlist[i] for i in xrange(len(idlist)) if random.random() > problist[i]]
+        likes = [idlist[i] for i in xrange(len(idlist)) if random.random() < problist[i]]
         likelist = [[
             unicode(uuid.uuid3(uuid.NAMESPACE_DNS,str(i)+str(contentid)+'l')),
             i,

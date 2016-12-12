@@ -94,7 +94,7 @@ class LegislatorPageController < ApplicationController
   end
 
   def post_time(c)
-     time_ago_in_words(Time.parse(c.time)) + "ago"
+     time_ago_in_words(Time.parse(c.time)) + " ago"
   end
 
 end

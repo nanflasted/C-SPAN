@@ -1,7 +1,15 @@
 class HomepageController < ApplicationController
-
+  helper_method :get_img_link
+  helper_method :rlink
     def view
-        #do nothing for now
+       @legislators = Legislator.where(" ").order("name ASC")
     end
 
+  def get_img_link(id)
+    return "http://localhost:3000/l_img/#{id}"
+  end
+
+  def rlink(pid)
+    return "/legislator_page/#{pid}"
+  end
 end

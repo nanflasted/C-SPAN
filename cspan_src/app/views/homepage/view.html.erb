@@ -1,3 +1,16 @@
-HOMEPAGE
+<font color="black">
+<h1>CSPAN.ONLINE</h1>
+<hr>
+<p><font size=3>Welcome to CSPAN.ONLINE, the only political site you need! <br>Click on your favorite senator or representative and check out what they've been up to.</p>
+
+<% @legislators.each do |l| %>
+    <p>
+     <A HREF = <%= rlink(l.id) %> ><img src= <%= get_img_link(l.id) %> alt= <%= @name %> style="width:200px;height:200px;"></A>
+    <br>
+    <font size=4><%= l.name %></h1>
+    <br>
+    <br>
+    </p>
+<% end %>
 
 
