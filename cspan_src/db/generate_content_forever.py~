@@ -18,12 +18,9 @@ memes = ["harambe","dos_equis","capitol","trump","obama"]
 while(True):
     try:
         lid = random.choice(idlist)[0]
-        lid = 300071
         print("Chose: " + str(lid))
 
         content_random = random.randint(1, 100)        
-        if content_random < 90:
-            continue
 
         if content_random < 40 or last_post == None:
             print("generating post")
@@ -40,4 +37,5 @@ while(True):
     
     except Exception as e:
         print("Error:", e)
-    #time.sleep(10)
+
+    time.sleep(70)
