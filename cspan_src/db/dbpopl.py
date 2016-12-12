@@ -266,7 +266,7 @@ def genBills(num,committee,iden):
                         ]).split("\n")[1].capitalize()]
 
             #concatenate literals
-            res += [", ".join(genlits[:-1]) + " and " + genlits[-1] + " Act of 2017"]
+            res += [((", ".join(genlits[:-1]) + " and ") if k > 1 else "") + genlits[-1] + " Act of 2017"]
             print res
             print "{0}/{1} bills generated".format(i+1,num)
         #insert into database

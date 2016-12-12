@@ -2,5 +2,5 @@
 *.db
 *.swp
 twcred.py
-/data/
-/log/
+./data/
+./log/
