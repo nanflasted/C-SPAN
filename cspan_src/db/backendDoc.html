@@ -9,7 +9,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>backend</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/media/nanflasted/New Volume/Programming/Linux/github/C-SPAN/backend/backend.py">/media/nanflasted/New Volume/Programming/Linux/github/C-SPAN/backend/backend.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/media/nanflasted/New Volume/Programming/Linux/github/C-SPAN/cspan_src/db/backend.py">/media/nanflasted/New Volume/Programming/Linux/github/C-SPAN/cspan_src/db/backend.py</a></font></td></tr></table>
     <p></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -61,13 +61,14 @@ Args:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;likes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;also&nbsp;generate&nbsp;the&nbsp;'like'&nbsp;relations<br>
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;&nbsp;&nbsp;&nbsp;ids&nbsp;of&nbsp;the&nbsp;generated&nbsp;contents&nbsp;if&nbsp;successful,&nbsp;None&nbsp;otherwise</tt></dd></dl>
- <dl><dt><a name="-newMeme"><strong>newMeme</strong></a>(num, legis_id, bg, insert<font color="#909090">=True</font>, likes<font color="#909090">=True</font>)</dt><dd><tt>Similar&nbsp;to&nbsp;newTweet,&nbsp;but&nbsp;in&nbsp;the&nbsp;meme&nbsp;form<br>
+ <dl><dt><a name="-newMeme"><strong>newMeme</strong></a>(num, legis_id, bg, insert<font color="#909090">=True</font>, likes<font color="#909090">=True</font>, primer<font color="#909090">=None</font>)</dt><dd><tt>Similar&nbsp;to&nbsp;newTweet,&nbsp;but&nbsp;in&nbsp;the&nbsp;meme&nbsp;form<br>
 Args:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;num:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;memes&nbsp;to&nbsp;be&nbsp;generated<br>
 &nbsp;&nbsp;&nbsp;&nbsp;legis_id:&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;legislator,&nbsp;should&nbsp;be&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;bg:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;encoded&nbsp;string&nbsp;for&nbsp;the&nbsp;background&nbsp;of&nbsp;the&nbsp;meme<br>
 &nbsp;&nbsp;&nbsp;&nbsp;insert:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;insert&nbsp;the&nbsp;generated&nbsp;memes&nbsp;into&nbsp;the&nbsp;db<br>
 &nbsp;&nbsp;&nbsp;&nbsp;likes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;also&nbsp;generate&nbsp;the&nbsp;'like'&nbsp;relations<br>
+&nbsp;&nbsp;&nbsp;&nbsp;primer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;prime&nbsp;text&nbsp;for&nbsp;neural&nbsp;net&nbsp;generation,&nbsp;default&nbsp;is&nbsp;None<br>
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;&nbsp;&nbsp;&nbsp;ids&nbsp;of&nbsp;the&nbsp;generated&nbsp;contents&nbsp;if&nbsp;successful,&nbsp;None&nbsp;otherwise</tt></dd></dl>
  <dl><dt><a name="-newReply"><strong>newReply</strong></a>(num, legis_id, oc_id, likes<font color="#909090">=True</font>)</dt><dd><tt>Generate&nbsp;replies&nbsp;to&nbsp;a&nbsp;content<br>
@@ -78,12 +79,13 @@ Args:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;likes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;also&nbsp;generate&nbsp;the&nbsp;'like'&nbsp;relations<br>
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;&nbsp;&nbsp;&nbsp;ids&nbsp;of&nbsp;the&nbsp;generated&nbsp;contents&nbsp;if&nbsp;successful,&nbsp;None&nbsp;otherwise</tt></dd></dl>
- <dl><dt><a name="-newTweet"><strong>newTweet</strong></a>(num, legis_id, insert<font color="#909090">=True</font>, likes<font color="#909090">=True</font>)</dt><dd><tt>Generate&nbsp;and&nbsp;maybe&nbsp;insert&nbsp;new&nbsp;tweets&nbsp;for&nbsp;given&nbsp;legislator<br>
+ <dl><dt><a name="-newTweet"><strong>newTweet</strong></a>(num, legis_id, insert<font color="#909090">=True</font>, likes<font color="#909090">=True</font>, primer<font color="#909090">=None</font>)</dt><dd><tt>Generate&nbsp;and&nbsp;maybe&nbsp;insert&nbsp;new&nbsp;tweets&nbsp;for&nbsp;given&nbsp;legislator<br>
 Args:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;num:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;tweets&nbsp;to&nbsp;be&nbsp;generated<br>
 &nbsp;&nbsp;&nbsp;&nbsp;legis_id:&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;legislator,&nbsp;should&nbsp;be&nbsp;int<br>
 &nbsp;&nbsp;&nbsp;&nbsp;insert:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;insert&nbsp;the&nbsp;generated&nbsp;tweets&nbsp;into&nbsp;the&nbsp;db<br>
 &nbsp;&nbsp;&nbsp;&nbsp;likes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether&nbsp;to&nbsp;also&nbsp;generate&nbsp;the&nbsp;'like'&nbsp;relations<br>
+&nbsp;&nbsp;&nbsp;&nbsp;primer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;prime&nbsp;text&nbsp;for&nbsp;neural&nbsp;net&nbsp;generation,&nbsp;default&nbsp;is&nbsp;None<br>
 Returns:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;content:&nbsp;&nbsp;&nbsp;&nbsp;ids&nbsp;of&nbsp;the&nbsp;generated&nbsp;contents&nbsp;if&nbsp;successful,&nbsp;None&nbsp;otherwise</tt></dd></dl>
  <dl><dt><a name="-populate"><strong>populate</strong></a>(t<font color="#909090">=5</font>, m<font color="#909090">=0</font>, b<font color="#909090">=10</font>, r<font color="#909090">=1</font>)</dt><dd><tt>Populate&nbsp;the&nbsp;database<br>

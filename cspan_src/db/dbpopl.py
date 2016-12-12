@@ -189,7 +189,7 @@ def getParticipation(commInfo,insert = True):
         return False
     return False
         
-def genTweets(num,iden,insert = True):
+def genTweets(num,iden,insert = True, prime = None):
     '''generate and insert tweets under iden's name, according to iden's ideology'''
     def dict_factory(cursor, row):
         d = {}
@@ -210,12 +210,15 @@ def genTweets(num,iden,insert = True):
         gentweets = []
         for i in range(num):
             numwords = random.choice(range(15,30))
-            gentweets += [subprocess.check_output([
+            params = [
                 "python","./rnn/sample.py",
                 "--save_dir",modeldir,
                 "-n",str(numwords),
                 "--sample",str(1)
-                ]).split("\n")[1]]
+                ]
+            if prime is not None:
+                params += ["--prime",prime]
+            gentweets += [subprocess.check_output(params).split("\n")[1]]
         print ("tweets" if insert else "reply") + " generation from model complete"
 
         collist = [
@@ -297,10 +300,10 @@ def genBills(num,committee,iden):
         return None
     return None
 
-def genMemes(num,iden,background,insert = True):
+def genMemes(num,iden,background,insert = True,primer=None):
     try:
         #generate tweets with genTweets(num,iden)
-        tw = genTweets(num,iden,False)
+        tw = genTweets(num,iden,False,primer)
         #break up tweets into 2 parts randomly
         for t in tw:
             k = random.choice(range(1,len(t[-2].split(" "))-2))

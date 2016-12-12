@@ -120,18 +120,19 @@ def getIdeology():
     return None
     
 
-def newTweet(num,legis_id,insert = True,likes=True):
+def newTweet(num,legis_id,insert = True,likes=True,primer = None):
     '''Generate and maybe insert new tweets for given legislator
     Args:
         num:        Number of tweets to be generated
         legis_id:   id of the legislator, should be int
         insert:     Whether to insert the generated tweets into the db
         likes:      Whether to also generate the 'like' relations
+        primer:     The prime text for neural net generation, default is None
     Returns:
         content:    ids of the generated contents if successful, None otherwise
     '''
     try:
-        res = dbpopl.genTweets(num,(legis_id,),insert)
+        res = dbpopl.genTweets(num,(legis_id,),insert,primer)
         res = [t[0] for t in res]
         if likes:
             idict = getIdeology()
@@ -142,7 +143,7 @@ def newTweet(num,legis_id,insert = True,likes=True):
         return None
     return None
 
-def newMeme(num,legis_id,bg,insert = True,likes=True):
+def newMeme(num,legis_id,bg,insert = True,likes=True,primer=None):
     '''Similar to newTweet, but in the meme form
     Args:
         num:        Number of memes to be generated
@@ -150,11 +151,12 @@ def newMeme(num,legis_id,bg,insert = True,likes=True):
         bg:         the encoded string for the background of the meme
         insert:     Whether to insert the generated memes into the db
         likes:      Whether to also generate the 'like' relations
+        primer:     The prime text for neural net generation, default is None
     Returns:
         content:    ids of the generated contents if successful, None otherwise
     '''
     try:
-        res = dbpopl.genMemes(num,(legis_id,),bg,insert)
+        res = dbpopl.genMemes(num,(legis_id,),bg,insert,primer)
         res = [m[0] for m in res]
         if likes:
             idict = getIdeology()
