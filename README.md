@@ -30,20 +30,27 @@ Everything is pip-installable; but for a detailed guide refer to the respective 
 
 Once the dependencies are set, you could clone the repository and run setup:
 
-'''
+```
 git clone https://github.com/nanflasted/C-SPAN.git
 cd C-SPAN/cspan_src/db
 python backend.py
-'''
+```
 
-This will setup the backend.
+This will setup the backend. After the set-up,
+
+```
+python generate_content_forever.py
+```
+
+will (guess it) generate contents forever.
 
 For the webpage, 
 
-'''
+```
 rails server
-'''
-Then visit http://localhost:3000
+```
+
+Then visit [your localhost rails site](http://localhost:3000 "Yay C-span on rails") for the website!
 
 
 
