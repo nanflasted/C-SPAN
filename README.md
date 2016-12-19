@@ -47,7 +47,7 @@ will (guess it) generate contents forever.
 For the webpage, 
 
 ```
-rails server
+rails s --binding=0.0.0.0
 ```
 
 Then visit [your localhost rails site](http://localhost:3000 "Yay C-span on rails") for the website!
